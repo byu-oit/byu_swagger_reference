@@ -1,0 +1,13 @@
+{
+  "xhealth": {
+    "$ref": "https://s3-us-west-2.amazonaws.com/dereference-swagger-byu/master/core/index.json#/simple_metadata"
+  },
+  "x-mock_json": {
+    "xhealth_response": {
+      "validation_response": {
+        "return_code": 200,
+        "response": "Success"
+      }
+    }
+  }
+}

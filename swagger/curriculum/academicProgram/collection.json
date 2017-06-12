@@ -1,0 +1,170 @@
+{
+  "collection": {
+    "description": "A collection of academicProgram resources",
+    "type": "object",
+    "required": [
+      "values"
+    ],
+    "properties": {
+      "links": {
+        "description": "Hypermedia Links that impact the academicProgram collection",
+        "type": "object",
+        "properties": {
+          "collection": {
+            "type": "object",
+            "properties": {
+              "rel": {
+                "type": "string",
+                "enum": [
+                  "self"
+                ],
+                "default": "self"
+              },
+              "href": {
+                "type": "string",
+                "format": "uri",
+                "default": "https://api.byu.edu/curriculum/v1.0/academicProgram/v1?yearTerm=:yearTerm&offset=:offset&limit=:limit&asOf=:asOf"
+              },
+              "method": {
+                "type": "string",
+                "enum": [
+                  "GET"
+                ],
+                "default": "GET"
+              }
+            }
+          }
+        }
+      },
+      "metadata": {
+        "$ref": "#/metadata"
+      },
+      "values": {
+        "type": "array",
+        "items": {
+          "$ref": "https://s3-us-west-2.amazonaws.com/dereference-swagger-byu/master/curriculum/academicProgram/simple.json"
+        }
+      }
+    },
+    "example": {
+      "$ref": "#/x-mock_json/academicPrograms"
+    }
+  },
+  "metadata": {
+    "allOf": [
+      {
+        "type": "object",
+        "properties": {
+          "field_sets_returned": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "basic"
+              ]
+            }
+          },
+          "field_sets_available": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "basic"
+              ]
+            }
+          },
+          "field_sets_default": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "basic"
+              ]
+            }
+          },
+          "contexts_available": {
+            "description": "Contexts available for a collection of academic program resources",
+            "type": "object",
+            "properties": {
+              "all": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "basic"
+                  ]
+                }
+              }
+            }
+          },
+          "collection_size": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "default_offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "default_limit": {
+            "type": "integer",
+            "minimum": 100
+          }
+        }
+      },
+      {
+        "type": "object",
+        "properties": {
+          "validation_response": {
+            "$ref": "https://s3-us-west-2.amazonaws.com/dereference-swagger-byu/master/curriculum/academicProgram/index.json#/validation_response"
+          }
+        }
+      }
+    ]
+  },
+  "x-mock_json": {
+    "collection": {
+      "links": {
+        "collection": {
+          "rel": "self",
+          "href": "https://api.byu.edu/curriculum/v1.0/academicPrograms?yearTerm=:yearTerm&offset=:offset&limit=:limit&asOf=:asOf",
+          "method": "GET"
+        }
+      },
+      "metadata": {
+        "field_sets_returned": [
+          "basic"
+        ],
+        "field_sets_available": [
+          "basic"
+        ],
+        "contexts_available": {
+          "all": [
+            "basic"
+          ]
+        },
+        "collection_size": 1,
+        "offset": 0,
+        "limit": 100,
+        "default_offset": 0,
+        "default_limit": 100,
+        "validation_response": {
+          "return_code": 200,
+          "response": "Retrieve Successful"
+        }
+      },
+      "values": [
+        {
+          "$ref": "https://s3-us-west-2.amazonaws.com/dereference-swagger-byu/master/curriculum/academicProgram/index.json#/x-mock_json/academicProgram"
+        }
+      ]
+    }
+  }
+}

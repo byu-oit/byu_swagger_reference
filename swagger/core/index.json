@@ -1,0 +1,80 @@
+{
+  "simple_metadata": {
+    "type": "object",
+    "properties": {
+      "validation_response": {
+        "$ref": "#/validation_response"
+      }
+    }
+  },
+  "validation_response": {
+    "type": "object",
+    "required": [
+      "return_code",
+      "response"
+    ],
+    "properties": {
+      "return_code": {
+        "type": "integer"
+      },
+      "response": {
+        "type": "string"
+      }
+    }
+  },
+  "query_parameters": {
+    "offset": {
+      "name": "offset",
+      "in": "query",
+      "description": "offset into a collection of resouces if the offset is 5 the query is asking for the result set to start with the fifth resource in the collection",
+      "required": false,
+      "type": "number"
+    },
+    "limit": {
+      "name": "limit",
+      "in": "query",
+      "description": "limit the size of the results of a collecction. The result set will contain at most limit resources",
+      "required": false,
+      "type": "number"
+    },
+    "asOf": {
+      "name": "asOf",
+      "in": "query",
+      "description": "a date in the form of 'YYYY-MM-DD' or a date specification, such as 'Today', 'Yesterday', or '10 years ago', that will filter the resulting resources to be resources that are effective as of the date provided.",
+      "required": false,
+      "type": "string"
+    }
+  },
+  "responses": {
+    "400": {
+      "description": "Invalid Request - unable to interpret request",
+      "schema": {
+        "$ref": "#/simple_metadata"
+      }
+    },
+    "401": {
+      "description": "Authentication required to access data",
+      "schema": {
+        "$ref": "#/simple_metadata"
+      }
+    },
+    "403": {
+      "description": "Access denied to protected data",
+      "schema": {
+        "$ref": "#/simple_metadata"
+      }
+    },
+    "409": {
+      "description": "Query parameters conflict or are malformed",
+      "schema": {
+        "$ref": "#/simple_metadata"
+      }
+    },
+    "default": {
+      "description": "Unexpected error",
+      "schema": {
+        "$ref": "#/simple_metadata"
+      }
+    }
+  }
+}

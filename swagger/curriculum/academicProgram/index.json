@@ -1,0 +1,221 @@
+{
+  "academicProgram": {
+    "description": "An academic program resource",
+    "type": "object",
+    "properties": {
+      "links": {
+        "$ref": "#/links"
+      },
+      "metadata": {
+        "$ref": "#/metadata"
+      },
+      "values": {
+        "basic": {
+          "$ref": "#/basic"
+        }
+      }
+    },
+    "example": {
+      "$ref": "#/x-mock_json/academicProgram"
+    }
+  },
+  "links": {
+    "description": "Hypermedia Links for an academic program resource",
+    "type": "object",
+    "properties": {
+      "academicProgram": {
+        "description": "Hypermedia link to retrieve this academic program resource",
+        "type": "object",
+        "required": [
+          "rel",
+          "href",
+          "method"
+        ],
+        "properties": {
+          "rel": {
+            "type": "string",
+            "enum": [
+              "self"
+            ],
+            "default": "self"
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "default": "https://api.byu.edu/curriculum/v1.0/academicProgram/:programId"
+          },
+          "method": {
+            "type": "string",
+            "enum": [
+              "GET"
+            ],
+            "default": "GET"
+          }
+        }
+      }
+    }
+  },
+  "metadata": {
+    "allOf": [
+      {
+        "type": "object",
+        "properties": {
+          "field_sets_returned": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "basic"
+              ]
+            }
+          },
+          "field_sets_available": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "basic"
+              ]
+            }
+          },
+          "field_sets_default": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "basic"
+              ]
+            }
+          },
+          "contexts_available": {
+            "description": "Contexts available for the academic program resource",
+            "type": "object",
+            "properties": {
+              "all": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "basic"
+                  ]
+                }
+              }
+            }
+          },
+          "collection_size": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      {
+        "$ref": "#/simple_metadata"
+      }
+    ]
+  },
+  "basic": {
+    "description": "Basic field set for an academic program resource",
+    "type": "object",
+    "properties": {
+      "programId": {
+        "$ref": "#/programId"
+      }
+    },
+    "example": {
+      "$ref": "#/x-mock_json/academicProgram/values/0/basic"
+    }
+  },
+  "simple_metadata": {
+    "type": "object",
+    "properties": {
+      "validation_response": {
+        "$ref": "#/validation_response"
+      }
+    }
+  },
+  "validation_response": {
+    "type": "object",
+    "required": [
+      "return_code",
+      "response"
+    ],
+    "properties": {
+      "return_code": {
+        "type": "integer"
+      },
+      "response": {
+        "type": "string"
+      }
+    }
+  },
+  "programId": {
+    "description": "id",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 5
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Academic Program ID"
+      }
+    },
+    "example": {
+      "$ref": "#/x-mock_json/academicProgram/values/0/basic/programId"
+    }
+  },
+  "x-mock_json": {
+    "academicProgram": {
+      "links": {
+        "academicProgram": {
+          "rel": "self",
+          "href": "https://api.byu.edu/curriculum/v1.0/academicProgram/12345",
+          "method": "GET"
+        }
+      },
+      "metadata": {
+        "field_sets_returned": [
+          "basic"
+        ],
+        "field_sets_available": [
+          "basic"
+        ],
+        "contexts_available": {
+          "all": [
+            "basic"
+          ]
+        },
+        "collection_size": 1,
+        "validation_response": {
+          "return_code": 200,
+          "response": "Retrieve Successful"
+        }
+      },
+      "values": [
+        {
+          "basic": {
+            "programId": {
+              "value": "12345",
+              "api_type": "system",
+              "display_label": "Program Id"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
