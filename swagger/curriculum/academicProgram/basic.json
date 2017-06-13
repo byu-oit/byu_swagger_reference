@@ -109,7 +109,7 @@
         }
       },
       {
-        "$ref": "#/simple_metadata"
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/core/index.json#/simple_metadata"
       }
     ]
   },
@@ -118,64 +118,11 @@
     "type": "object",
     "properties": {
       "programId": {
-        "$ref": "#/programId"
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/programId"
       }
     },
     "example": {
       "$ref": "#/x-mock_json/academicProgram/values/0/basic"
-    }
-  },
-  "simple_metadata": {
-    "type": "object",
-    "properties": {
-      "validation_response": {
-        "$ref": "#/validation_response"
-      }
-    }
-  },
-  "validation_response": {
-    "type": "object",
-    "required": [
-      "return_code",
-      "response"
-    ],
-    "properties": {
-      "return_code": {
-        "type": "integer"
-      },
-      "response": {
-        "type": "string"
-      }
-    }
-  },
-  "programId": {
-    "description": "id",
-    "type": "object",
-    "required": [
-      "value"
-    ],
-    "properties": {
-      "value": {
-        "type": "string",
-        "maxLength": 5
-      },
-      "api_type": {
-        "type": "string",
-        "enum": [
-          "system"
-        ],
-        "default": "system"
-      },
-      "key": {
-        "type": "boolean"
-      },
-      "display_label": {
-        "type": "string",
-        "default": "Academic Program ID"
-      }
-    },
-    "example": {
-      "$ref": "#/x-mock_json/academicProgram/values/0/basic/programId"
     }
   },
   "x-mock_json": {

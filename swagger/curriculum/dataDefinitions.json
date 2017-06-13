@@ -33,7 +33,9 @@
       }
     },
     "example": {
-      "$ref": "#/x-mock_json/academicProgram/values/0/basic/programId"
+      "value": "12345",
+      "api_type": "system",
+      "display_label": "Program Id"
     }
   }
 }
