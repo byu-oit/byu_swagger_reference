@@ -1,8 +1,39 @@
 {
-    "yearTerm": {
-      "description": "Year and Term identifier in the form YYYY[1|3|4|5] ex: 20175 is the winter semester of the year 2017",
-      "required": false,
-      "type": "string",
-      "pattern": "^[0-9]{4}(1|3|4|5)$"
+  "yearTerm": {
+    "description": "Year and Term identifier in the form YYYY[1|3|4|5] ex: 20175 is the winter semester of the year 2017",
+    "required": false,
+    "type": "string",
+    "pattern": "^[0-9]{4}(1|3|4|5)$"
+  },
+  "programId": {
+    "description": "Internally generated unique identifier of an academic program definition.",
+    "type": "object",
+    "pattern": "^[0-9]{5}$",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 5
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Academic Program ID"
+      }
+    },
+    "example": {
+      "$ref": "#/x-mock_json/academicProgram/values/0/basic/programId"
     }
+  }
 }

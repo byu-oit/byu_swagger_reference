@@ -42,7 +42,7 @@
       "values": {
         "type": "array",
         "items": {
-          "$ref": "https://s3-us-west-2.amazonaws.com/dereference-swagger-byu/master/curriculum/academicProgram/simple.json"
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/simple.json"
         }
       }
     },
@@ -120,12 +120,7 @@
         }
       },
       {
-        "type": "object",
-        "properties": {
-          "validation_response": {
-            "$ref": "https://s3-us-west-2.amazonaws.com/dereference-swagger-byu/master/curriculum/academicProgram/index.json#/validation_response"
-          }
-        }
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/core/index.json#/simple_metadata"
       }
     ]
   },
@@ -162,7 +157,7 @@
       },
       "values": [
         {
-          "$ref": "https://s3-us-west-2.amazonaws.com/dereference-swagger-byu/master/curriculum/academicProgram/index.json#/x-mock_json/academicProgram"
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/index.json#/x-mock_json/academicProgram"
         }
       ]
     }
