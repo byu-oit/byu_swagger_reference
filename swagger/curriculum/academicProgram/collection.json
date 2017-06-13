@@ -42,7 +42,7 @@
       "values": {
         "type": "array",
         "items": {
-          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/basic.json"
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/basic.json#/academicProgram"
         }
       }
     },
