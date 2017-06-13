@@ -42,12 +42,12 @@
       "values": {
         "type": "array",
         "items": {
-          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/simple.json"
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/basic.json"
         }
       }
     },
     "example": {
-      "$ref": "#/x-mock_json/academicPrograms"
+      "$ref": "#/x-mock_json/collection"
     }
   },
   "metadata": {
