@@ -117,6 +117,9 @@
     "description": "Basic field set for an academic program resource",
     "type": "object",
     "properties": {
+      "creditInstitution": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/creditInstitution"
+      },
       "programId": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/programId"
       }
