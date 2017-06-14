@@ -1,5 +1,5 @@
 {
-  "creditInstituiton": {
+  "creditInstitution": {
     "description": "Institution associated with this resource.",
     "type": "object",
     "required": [
