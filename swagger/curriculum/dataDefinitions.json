@@ -1,4 +1,36 @@
 {
+  "creditInstituiton": {
+    "description": "Institution associated with this resource.",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 15
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Institution"
+      }
+    },
+    "example": {
+      "value": "BYU PROVO",
+      "api_type": "system",
+      "display_label": "Institution"
+    }
+  },
   "programId": {
     "description": "Internally generated unique identifier of an academic program definition.",
     "type": "object",
@@ -23,7 +55,7 @@
       },
       "display_label": {
         "type": "string",
-        "default": "Academic Program ID"
+        "default": "Program ID"
       }
     },
     "example": {

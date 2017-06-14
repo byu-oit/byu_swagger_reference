@@ -155,6 +155,11 @@
       "values": [
         {
           "basic": {
+            "creditInstitution": {
+              "value": "BYU PROVO",
+              "api_type": "system",
+              "display_label": "Institution"
+            }
             "programId": {
               "value": "12345",
               "api_type": "system",
