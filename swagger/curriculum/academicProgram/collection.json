@@ -142,8 +142,6 @@
         "collection_size": 1,
         "offset": 0,
         "limit": 100,
-        "default_offset": 0,
-        "default_limit": 100,
         "validation_response": {
           "return_code": 200,
           "response": "Retrieve Successful"
