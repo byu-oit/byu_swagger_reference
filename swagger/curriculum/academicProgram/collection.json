@@ -23,7 +23,7 @@
               "href": {
                 "type": "string",
                 "format": "uri",
-                "default": "https://api.byu.edu/curriculum/v1.0/academicProgram/v1?yearTerm=:yearTerm&offset=:offset&limit=:limit&asOf=:asOf"
+                "default": "https://api.byu.edu/curriculum/v1.0/academicPrograms/v1?yearTerm=:yearTerm&offset=:offset&limit=:limit&asOf=:asOf"
               },
               "method": {
                 "type": "string",
@@ -103,19 +103,13 @@
           },
           "offset": {
             "type": "integer",
-            "minimum": 0
+            "minimum": 0,
+            "default": 0
           },
           "limit": {
             "type": "integer",
-            "minimum": 1
-          },
-          "default_offset": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "default_limit": {
-            "type": "integer",
-            "minimum": 100
+            "minimum": 1,
+            "default": 100
           }
         }
       },
