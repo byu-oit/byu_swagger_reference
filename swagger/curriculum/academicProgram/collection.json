@@ -86,7 +86,7 @@
             "description": "Contexts available for a collection of academic program resources",
             "type": "object",
             "properties": {
-              "all": {
+              "basic": {
                 "type": "array",
                 "items": {
                   "type": "string",
