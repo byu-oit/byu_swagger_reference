@@ -135,7 +135,7 @@
           "basic"
         ],
         "contexts_available": {
-          "all": [
+          "basic": [
             "basic"
           ]
         },
