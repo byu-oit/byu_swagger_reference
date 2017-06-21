@@ -190,10 +190,47 @@
             },
             "programType": {
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/programType/example"
+            },
+            "description": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/description/example"
+            },
+            "diplomaDesc": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/diplomaDesc/example"
+            },
+            "longDesc": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/longDesc/example"
             }
           }
         }
       ]
     }
   }
+  
+//  app_1  |   degree: 'PRE',
+//  app_1  |   degreeLevel: 0,
+//  app_1  |   validAdmit: 'N',
+//  app_1  |   teachingProgram: 'N',
+//  app_1  |   limEnrProgram: 'N',
+//  app_1  |   committeeMemReq: 0,
+//  app_1  |   majorProgramId: null,
+//  app_1  |   geProgramId: '20036',
+//  app_1  |   coreProgramId: null,
+//  app_1  |   emphasisReq: 'O',
+//  app_1  |   minorReq: 'N',
+//  app_1  |   studyListRequired: 'N',
+//  app_1  |   honorsRec: 'N',
+//  app_1  |   maxYrsCompl: null,
+//  app_1  |   programHrs: null,
+//  app_1  |   minProgramHrs: null,
+//  app_1  |   maxProgramHrs: null,
+//  app_1  |   maxRHours: 0,
+//  app_1  |   maxRClasses: 0,
+//  app_1  |   residenceHrs: null,
+//  app_1  |   prevProgramId: '20036',
+//  app_1  |   comments: null,
+//  app_1  |   dateTimeUpdated: '2005-09-20T14:27:55-06:00',
+//  app_1  |   updatedById: '681204932',
+//  app_1  |   programCode: '000017',
+//  app_1  |   effYearTerm: '19935',
+//  app_1  |   expYearTerm: '29995' }
 }
