@@ -180,14 +180,13 @@
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/creditInstitution/example"
             },
             "programId": {
-              "value": "12345",
-              "api_type": "system",
-              "display_label": "Program Id"
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/programId/example"
             },
             "effectiveDate": {
-              "value": "12345",
-              "api_type": "system",
-              "display_label": "Program Id"
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/effectiveDate/example"
+            },
+            "expiredDate": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredDate/example"
             },
             "programType": {
               "value": "GE",
