@@ -178,7 +178,6 @@
           "basic": {
             "creditInstitution": {
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/creditInstitution/example"
-            }
             },
             "programId": {
               "value": "12345",
