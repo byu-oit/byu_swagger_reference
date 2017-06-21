@@ -1,0 +1,10 @@
+{
+  "programId": {
+    "name": "programId",
+    "in": "path",
+    "description": "Uniquely identifies an academic program",
+    "required": true,
+    "type": "string",
+    "pattern": "^[0-9]{5}$"
+  }
+}

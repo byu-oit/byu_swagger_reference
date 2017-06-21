@@ -1,12 +1,10 @@
 {
-  "query_parameters": {
-    "yearTerm": {
-      "name": "yearTerm",
-      "in": "query",
-      "description": "Identifies a semester or term period of time.  For example: 20175 is the winter semester of the year 2017",
-      "required": false,
-      "type": "string",
-      "pattern": "^[0-9]{4}(1|3|4|5)$"
-    }
+  "yearTerm": {
+    "name": "yearTerm",
+    "in": "query",
+    "description": "Identifies a semester or term period of time.  For example: 20175 is the winter semester of the year 2017",
+    "required": false,
+    "type": "string",
+    "pattern": "^[0-9]{4}(1|3|4|5)$"
   }
 }

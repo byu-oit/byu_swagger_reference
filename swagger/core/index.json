@@ -64,6 +64,12 @@
         "$ref": "#/simple_metadata"
       }
     },
+    "404": {
+      "description": "Resource not found",
+      "schema": {
+        "$ref": "#/simple_metadata"
+      }
+    },
     "409": {
       "description": "Query parameters conflict or are malformed",
       "schema": {
