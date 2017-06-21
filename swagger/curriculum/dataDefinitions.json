@@ -63,5 +63,99 @@
       "api_type": "system",
       "display_label": "Program Id"
     }
+  },
+  "programType": {
+    "description": "Code used to indicate what type of program an academic program is.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 2
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Program Type"
+      }
+    },
+    "example": {
+      "value": "GE",
+      "api_type": "system",
+      "display_label": "Program Type"
+    }
+  },
+  "diplomaDesc": {
+    "description": "Text to be printed/displayed on a diploma earned with a degree in the associated academic program.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Diploma Description"
+      }
+    },
+    "example": {
+      "value": "Bachelors of Science in Matematics",
+      "api_type": "system",
+      "display_label": "Diploma Description"
+    }
+  },
+  "longDesc": {
+    "description": "A longer textual description of an Academic Program.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Full Description"
+      }
+    },
+    "example": {
+      "value": "This academic program is designed to ...",
+      "api_type": "system",
+      "display_label": "Full Description"
+    }
   }
 }

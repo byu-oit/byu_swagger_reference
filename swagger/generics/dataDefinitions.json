@@ -1,0 +1,95 @@
+{
+  "effectiveDate": {
+    "description": "Resource is considered the effective version as of this date.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "date"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Effective"
+      }
+    },
+    "example": {
+      "value": "2017-01-01",
+      "api_type": "system",
+      "display_label": "Effective"
+    }
+  },
+  "expiredDate": {
+    "description": "Resource is considered to be an expired or historical version as of this date.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "date"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Effective"
+      }
+    },
+    "example": {
+      "value": "2017-01-01",
+      "api_type": "system",
+      "display_label": "Effective"
+    }
+  },
+  "description": {
+    "description": "Description of a resource.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Description"
+      }
+    },
+    "example": {
+      "value": "A description",
+      "api_type": "system",
+      "display_label": "Description"
+    }
+  }
+}
