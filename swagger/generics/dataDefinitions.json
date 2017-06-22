@@ -91,5 +91,37 @@
       "api_type": "system",
       "display_label": "Description"
     }
+  },
+  "alphaFlag": {
+    "description": "Boolean flag as a Y|N character value.",
+    "type": "Object",
+    "pattern": "^[YN]$",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Flag"
+      }
+    },
+    "example": {
+      "value": "Y",
+      "api_type": "system",
+      "display_label": "Flag"
+    }
   }
 }

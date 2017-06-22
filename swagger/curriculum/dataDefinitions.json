@@ -31,71 +31,6 @@
       "display_label": "Institution"
     }
   },
-  "programId": {
-    "description": "Internally generated unique identifier of an academic program definition.",
-    "type": "object",
-    "pattern": "^[0-9]{5}$",
-    "required": [
-      "value"
-    ],
-    "properties": {
-      "value": {
-        "type": "string",
-        "maxLength": 5
-      },
-      "api_type": {
-        "type": "string",
-        "enum": [
-          "system"
-        ],
-        "default": "system"
-      },
-      "key": {
-        "type": "boolean"
-      },
-      "display_label": {
-        "type": "string",
-        "default": "Program ID"
-      }
-    },
-    "example": {
-      "value": "12345",
-      "api_type": "system",
-      "display_label": "Program Id"
-    }
-  },
-  "programType": {
-    "description": "Code used to indicate what type of program an academic program is.",
-    "type": "Object",
-    "required": [
-      "value"
-    ],
-    "properties": {
-      "value": {
-        "type": "string",
-        "maxLength": 2
-      },
-      "api_type": {
-        "type": "string",
-        "enum": [
-          "system"
-        ],
-        "default": "system"
-      },
-      "key": {
-        "type": "boolean"
-      },
-      "display_label": {
-        "type": "string",
-        "default": "Program Type"
-      }
-    },
-    "example": {
-      "value": "GE",
-      "api_type": "system",
-      "display_label": "Program Type"
-    }
-  },
   "diplomaDesc": {
     "description": "Text to be printed/displayed on a diploma earned with a degree in the associated academic program.",
     "type": "Object",
@@ -156,6 +91,195 @@
       "value": "This academic program is designed to ...",
       "api_type": "system",
       "display_label": "Full Description"
+    },
+    "cipCode": {
+      "description": "A Classification of Instructional Programs (CIP) to provide a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity.",
+      "type": "Object",
+      "required": [
+        "value"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "system"
+          ],
+          "default": "system"
+        },
+        "key": {
+          "type": "boolean"
+        },
+        "display_label": {
+          "type": "string",
+          "default": "CIP Code"
+        }
+      },
+      "example": {
+        "value": "11.0103",
+        "api_type": "system",
+        "display_label": "CIP Code"
+      }
+    }
+  },
+  "majorCode": {
+    "description": "Identifier of an academic major.",
+    "type": "object",
+    "pattern": "^[0-9]{5}$",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Major Code"
+      }
+    },
+    "example": {
+      "value": "12345",
+      "api_type": "system",
+      "display_label": "Major Code"
+    }
+  },
+  "minGrade": {
+    "description": "Allowable minimum grade that can be accepted in an academic program.",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Min Grade"
+      }
+    },
+    "example": {
+      "value": "C-",
+      "api_type": "system",
+      "display_label": "Min Grade"
+    }
+  },
+  "programId": {
+    "description": "Internally generated unique identifier of an academic program definition.",
+    "type": "object",
+    "pattern": "^[0-9]{5}$",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Program Id"
+      }
+    },
+    "example": {
+      "value": "12345",
+      "api_type": "system",
+      "display_label": "Program Id"
+    }
+  },
+  "programType": {
+    "description": "Code used to indicate what type of program an academic program is.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 2
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Program Type"
+      }
+    },
+    "example": {
+      "value": "GE",
+      "api_type": "system",
+      "display_label": "Program Type"
+    }
+  },
+  "yearsToComplete": {
+    "description": "The number of years it is expected to take to complete an academic program.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "integer"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Years To Complete"
+      }
+    },
+    "example": {
+      "value": 4,
+      "api_type": "system",
+      "display_label": "Years To Complete"
     }
   }
 }
