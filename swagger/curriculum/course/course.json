@@ -23,7 +23,7 @@
     "description": "Hypermedia Links for an academic course resource",
     "type": "object",
     "properties": {
-      "programRequirement": {
+      "course": {
         "description": "Hypermedia link to retrieve this academic course resource",
         "type": "object",
         "required": [
@@ -65,7 +65,8 @@
             "items": {
               "type": "string",
               "enum": [
-                "basic"
+                "basic",
+                "summary"
               ]
             }
           },
