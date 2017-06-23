@@ -146,13 +146,13 @@
       },
       "display_label": {
         "type": "string",
-        "default": "Effective"
+        "default": "Expired"
       }
     },
     "example": {
       "value": "2017-01-01",
       "api_type": "system",
-      "display_label": "Effective"
+      "display_label": "Expired"
     }
   },
   "text": {
