@@ -1,4 +1,20 @@
 {
+  "academicUnitId": {
+    "name": "academicUnitId",
+    "in": "path",
+    "description": "Uniquely identifies an academic unit",
+    "required": true,
+    "type": "string",
+    "pattern": "^[0-9]{4}$"
+  },
+  "curriculumId": {
+    "name": "programId",
+    "in": "path",
+    "description": "curriculum id of course",
+    "required": true,
+    "type": "string",
+    "pattern": "^[0-9]{5}$"
+  },
   "programId": {
     "name": "programId",
     "in": "path",
@@ -7,12 +23,12 @@
     "type": "string",
     "pattern": "^[0-9]{5}$"
   },
-  "academicUnitId": {
-    "name": "academicUnitId",
+  "titleCode": {
+    "name": "titleCode",
     "in": "path",
-    "description": "Uniquely identifies an academic unit",
+    "description": "title code of course",
     "required": true,
     "type": "string",
-    "pattern": "^[0-9]{4}$"
+    "pattern": "^[0-9]{3}$"
   }
 }
