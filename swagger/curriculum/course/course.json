@@ -1,0 +1,218 @@
+{
+  "course": {
+    "description": "Information about a given course.",
+    "type": "object",
+    "properties": {
+      "links": {
+        "$ref": "#/links"
+      },
+      "metadata": {
+        "$ref": "#/metadata"
+      },
+      "values": {
+        "summary": {
+          "$ref": "#/summary"
+        }
+      }
+    },
+    "example": {
+      "$ref": "#/x-mock_json/course"
+    }
+  },
+  "links": {
+    "description": "Hypermedia Links for an academic course resource",
+    "type": "object",
+    "properties": {
+      "programRequirement": {
+        "description": "Hypermedia link to retrieve this academic course resource",
+        "type": "object",
+        "required": [
+          "rel",
+          "href",
+          "method"
+        ],
+        "properties": {
+          "rel": {
+            "type": "string",
+            "enum": [
+              "self"
+            ],
+            "default": "self"
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "default": "https://api.byu.edu/curriculum/v1.0/course/:curriculumId,:titleCode"
+          },
+          "method": {
+            "type": "string",
+            "enum": [
+              "GET"
+            ],
+            "default": "GET"
+          }
+        }
+      }
+    }
+  },
+  "metadata": {
+    "allOf": [
+      {
+        "type": "object",
+        "properties": {
+          "field_sets_returned": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "basic"
+              ]
+            }
+          },
+          "field_sets_available": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "basic",
+                "summary"
+              ]
+            }
+          },
+          "field_sets_default": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "basic"
+              ]
+            }
+          },
+          "contexts_available": {
+            "description": "Contexts available for the academic program requirement resource",
+            "type": "object",
+            "properties": {
+              "all": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "basic",
+                    "summary"
+                  ]
+                }
+              }
+            }
+          },
+          "collection_size": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/core/index.json#/simple_metadata"
+      }
+    ]
+  },
+  "summary": {
+    "description": "Summary subset of course information",
+    "type": "object",
+    "properties": {
+      "deptName": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/deptName"
+      },
+      "catalogNumber": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/catalogNumber"
+      },
+      "catalogSuffix": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/catalogSuffix"
+      },
+      "transcriptTitle": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/transcriptTitle"
+      },
+      "creditHours": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/creditHours"
+      },
+      "fixedOrVariable": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fixedOrVariablle"
+      },
+      "minCreditHours": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fixedOrVariablle"
+      },
+      "fallFrequency": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fixedOrVariablle"
+      },
+      "winterFrequency": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fixedOrVariablle"
+      }
+    },
+    "example": {
+      "$ref": "#/x-mock_json/course/values/0/summary"
+    }
+  },
+  "x-mock_json": {
+    "course": {
+      "links": {
+        "course": {
+          "rel": "self",
+          "href": "https://api.byu.edu/curriculum/v1.0/course/1234,001",
+          "method": "GET"
+        }
+      },
+      "metadata": {
+        "field_sets_returned": [
+          "summary"
+        ],
+        "field_sets_available": [
+          "basic",
+          "summary"
+        ],
+        "contexts_available": {
+          "all": [
+            "basic",
+            "summary"
+          ]
+        },
+        "collection_size": 1,
+        "validation_response": {
+          "return_code": 200,
+          "response": "Retrieve Successful"
+        }
+      },
+      "values": [
+        {
+          "summary": {
+            "deptName": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/deptName/example"
+            },
+            "catalogNumber": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/catalogNumber/example"
+            },
+            "catalogSuffix": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/catalogSuffix/example"
+            },
+            "transcriptTitle": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/transcriptTitle/example"
+            },
+            "creditHours": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/creditHours/example"
+            },
+            "fixedOrVariable": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fixedOrVariablle/example"
+            },
+            "minCreditHours": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fixedOrVariablle/example"
+            },
+            "fallFrequency": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fixedOrVariablle/example"
+            },
+            "winterFrequency": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fixedOrVariablle/example"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

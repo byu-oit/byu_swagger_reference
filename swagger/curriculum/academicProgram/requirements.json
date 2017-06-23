@@ -117,7 +117,7 @@
     "description": "Field set for an academic program requirements resource",
     "type": "object",
     "properties": {
-      "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/basic.json#/academicProgram",
+      "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/academicProgram.json#/academicProgram",
       "cipCode": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/cipCode"
       },
@@ -135,6 +135,18 @@
       },
       "yearsToComplete": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/yearsToComplete"
+      },
+      "orgaizationTree": {
+        "type": "array",
+        "items": {
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicUnit/academicUnit.json#/academicUnit"
+        }
+      },
+      "programRequirements": {
+        "type": "array",
+        "items": {
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirements.json#/programRequirements"
+        }
       }
     },
     "example": {
@@ -142,11 +154,11 @@
     }
   },
   "x-mock_json": {
-    "academicProgram": {
+    "academicProgramRequirements": {
       "links": {
-        "academicProgram": {
+        "academicProgramRequirements": {
           "rel": "self",
-          "href": "https://api.byu.edu/curriculum/v1.0/academicProgram/12345",
+          "href": "https://api.byu.edu/curriculum/v1.0/academicProgram/12345/requirements",
           "method": "GET"
         }
       },
@@ -170,30 +182,35 @@
       },
       "values": [
         {
-          "requirements": {
-            "creditInstitution": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/creditInstitution/example"
-            },
-            "programId": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/programId/example"
-            },
-            "effectiveDate": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/effectiveDate/example"
-            },
-            "expiredDate": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredDate/example"
-            },
-            "programType": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/programType/example"
-            },
-            "description": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/description/example"
-            },
-            "diplomaDesc": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/diplomaDesc/example"
-            },
-            "longDesc": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/longDesc/example"
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/academicProgram.json#/academicProgram/example",
+          "cipCode": {
+            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/cipCode/example"
+          },
+          "furloughed": {
+            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/alphaFlag/exammple"
+          },
+          "major": {
+            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/majorCode/example"
+          },
+          "mastersRequired": {
+            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/alphaFlag/example"
+          },
+          "minGrade": {
+            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredDate/example"
+          },
+          "yearsToComplete": {
+            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/yearsToComplete/example"
+          },
+          "orgaizationTree": {
+            "type": "array",
+            "items": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicUnit/academicUnit.json#/academicUnit/example"
+            }
+          },
+          "programRequirements": {
+            "type": "array",
+            "items": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirements.json#/programRequirements/example"
             }
           }
         }

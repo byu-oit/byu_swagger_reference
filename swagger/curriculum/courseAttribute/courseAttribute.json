@@ -1,6 +1,6 @@
 {
-  "academicUnit": {
-    "description": "An academic unit resource",
+  "courseAttribute": {
+    "description": "A course attribute resource",
     "type": "object",
     "properties": {
       "links": {
@@ -16,15 +16,15 @@
       }
     },
     "example": {
-      "$ref": "#/x-mock_json/academicUnit"
+      "$ref": "#/x-mock_json/courseAttribute"
     }
   },
   "links": {
-    "description": "Hypermedia Links for an academic academic unit resource",
+    "description": "Hypermedia Links for an course attribute resource",
     "type": "object",
     "properties": {
-      "academicUnit": {
-        "description": "Hypermedia link to retrieve this academic academic unit resource",
+      "courseAttribute": {
+        "description": "Hypermedia link to retrieve this course attribute resource",
         "type": "object",
         "required": [
           "rel",
@@ -42,7 +42,7 @@
           "href": {
             "type": "string",
             "format": "uri",
-            "default": "https://api.byu.edu/curriculum/v1.0/academicUnit/:academicUnitId"
+            "default": "https://api.byu.edu/curriculum/v1.0/courseAttribute/:curriculumId,:titleCode,:effective_date,:expired_date,:attribute_name,:attribute_type,:attribute_value"
           },
           "method": {
             "type": "string",
@@ -88,7 +88,7 @@
             }
           },
           "contexts_available": {
-            "description": "Contexts available for the academic academic unit resource",
+            "description": "Contexts available for the course attribute resource",
             "type": "object",
             "properties": {
               "all": {
@@ -114,11 +114,14 @@
     ]
   },
   "basic": {
-    "description": "Basic field set for an academic academic unit resource",
+    "description": "Basic field set for an course attribute resource",
     "type": "object",
     "properties": {
-      "academicUnitId": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/academicUnitId"
+      "curriculumId": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/curriculumId"
+      },
+      "titleCode": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/titleCode"
       },
       "effectiveDate": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/effectiveDate"
@@ -126,32 +129,26 @@
       "expiredDate": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredDate"
       },
-      "unitType": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitType"
+      "attributeName": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/attributeName"
       },
-      "unitLevel": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitLevel"
+      "attributeType": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/attributeType"
       },
-      "unitName": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitName"
-      },
-      "officialName": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitName"
-      },
-      "parentAcademicUnitId": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/academicUnitId"
+      "attributeValue": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/attributeValue"
       }
     },
     "example": {
-      "$ref": "#/x-mock_json/academicUnit/values/0/basic"
+      "$ref": "#/x-mock_json/courseAttribute/values/0/basic"
     }
   },
   "x-mock_json": {
-    "academicUnit": {
+    "courseAttribute": {
       "links": {
-        "academicUnit": {
+        "courseAttribute": {
           "rel": "self",
-          "href": "https://api.byu.edu/curriculum/v1.0/academicUnit/1234",
+          "href": "https://api.byu.edu/curriculum/v1.0/courseAttribute/1234,123,2017-01-01,2999-12-31,name,type,value",
           "method": "GET"
         }
       },
@@ -176,8 +173,11 @@
       "values": [
         {
           "basic": {
-            "academicUnitId": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/academicUnitId/example"
+            "curriculumId": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/curriculumId/example"
+            },
+            "titleCode": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/titleCode/example"
             },
             "effectiveDate": {
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/effectiveDate/example"
@@ -185,20 +185,14 @@
             "expiredDate": {
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredDate/example"
             },
-            "unitType": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitType/example"
+            "attributeName": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/attributeName/example"
             },
-            "unitLevel": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitLevel/example"
+            "attributeType": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/attributeType/example"
             },
-            "unitName": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitName/example"
-            },
-            "officialName": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitName/example"
-            },
-            "parentAcademicUnitId": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/academicUnitId/example"
+            "attributeValue": {
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/attributeValue/example"
             }
           }
         }

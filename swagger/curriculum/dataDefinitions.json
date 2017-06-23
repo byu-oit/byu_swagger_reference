@@ -1,5 +1,161 @@
 {
-  "creditInstitution": {
+  "attributeName": {
+    "description": "The name of an academic course attribute resource or collection of resources.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Attribute Name"
+      }
+    },
+    "example": {
+      "value": "Name",
+      "api_type": "system",
+      "display_label": "Attribute Name"
+    }
+  },
+  "attributeType": {
+    "description": "The type or classification of an academic course attribute resource or collection of resources.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Attribute Type"
+      }
+    },
+    "example": {
+      "value": "Name",
+      "api_type": "system",
+      "display_label": "Attribute Type"
+    }
+  },
+  "attributeValue": {
+    "description": "The value of an academic course attribute resource.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Attribute Value"
+      }
+    },
+    "example": {
+      "value": "Name",
+      "api_type": "system",
+      "display_label": "Attribute Value"
+    }
+  },
+  "catalogNumber": {
+    "description": "A number assigned to a course to distinguish it from other courses within the.  Generally the higher the number the more specialized the course or the course is targeted towards students who are progressing in their degree.",
+    "type": "Object",
+    "pattern": "^[0-9]{3}$",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Catalog Number"
+      }
+    },
+    "example": {
+      "value": "123",
+      "api_type": "system",
+      "display_label": "Catalog Number"
+    }
+  },
+  "catalogSuffix": {
+  "description": " A code assigned to a course to indicate a feature such as repeatable or designated for honors students.",
+  "type": "Object",
+  "required": [
+    "value"
+  ],
+  "properties": {
+    "value": {
+      "type": "string",
+      "maxlength": 1
+    },
+    "api_type": {
+      "type": "string",
+      "enum": [
+        "system"
+      ],
+      "default": "system"
+    },
+    "key": {
+      "type": "boolean"
+    },
+    "display_label": {
+      "type": "string",
+      "default": "Catalog Suffix"
+    }
+  },
+  "example": {
+    "value": "R",
+    "api_type": "system",
+    "display_label": "Catalog Suffix"
+  }
+},"creditInstitution": {
     "description": "Institution associated with this resource.",
     "type": "object",
     "required": [
@@ -31,6 +187,101 @@
       "display_label": "Institution"
     }
   },
+  "deptName": {
+    "description": " An abbreviation of the primary subject content of the course.  Also known as a teaching area or subject code.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 5
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Dept Name"
+      }
+    },
+    "example": {
+      "value": "ECON",
+      "api_type": "system",
+      "display_label": "Dept Name"
+    }
+  },
+  "creditHours": {
+    "description": "The maximum number of hours a student will be credited with on completion of the course.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "integer"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Credit Hours"
+      }
+    },
+    "example": {
+      "value": 4,
+      "api_type": "system",
+      "display_label": "Credit Hours"
+    }
+  },
+  "curriculumId": {
+    "description": "Unique identifier of for a curriculum unit.",
+    "type": "object",
+    "pattern": "^[0-9]{5}$",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Curriculum Id"
+      }
+    },
+    "example": {
+      "value": "12345",
+      "api_type": "system",
+      "display_label": "Curriculum Id"
+    }
+  },
   "diplomaDesc": {
     "description": "Text to be printed/displayed on a diploma earned with a degree in the associated academic program.",
     "type": "Object",
@@ -60,6 +311,69 @@
       "value": "Bachelors of Science in Matematics",
       "api_type": "system",
       "display_label": "Diploma Description"
+    }
+  },
+  "displayOrder": {
+    "description": "The order in which to display the academic program requirement.",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "integer"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Display Order"
+      }
+    },
+    "example": {
+      "value": 1,
+      "api_type": "system",
+      "display_label": "Display Order"
+    }
+  },
+  "fixedOrVariable": {
+    "description": "Code used to indicate if a course allows variable credits.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 1
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Fixed or Variable"
+      }
+    },
+    "example": {
+      "value": "F",
+      "api_type": "system",
+      "display_label": "Fixed or Variable"
     }
   },
   "longDesc": {
@@ -156,6 +470,37 @@
       "display_label": "Major Code"
     }
   },
+  "minCreditHours": {
+    "description": "The minimum number of hours a student will be credited with on completion of the course.  Used in conjunction with variable credit courses to set the minimum credit range.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "integer"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Minimum Credit Hours"
+      }
+    },
+    "example": {
+      "value": 1,
+      "api_type": "system",
+      "display_label": "Minimum Credit Hours"
+    }
+  },
   "minGrade": {
     "description": "Allowable minimum grade that can be accepted in an academic program.",
     "type": "object",
@@ -249,6 +594,225 @@
       "value": "GE",
       "api_type": "system",
       "display_label": "Program Type"
+    }
+  },
+  "requirementId": {
+    "description": "Internally generated unique identifier of an academic program requirement resource.",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Requirement Id"
+      }
+    },
+    "example": {
+      "value": "f7641438004a83349aa00e23e8da3922",
+      "api_type": "system",
+      "display_label": "Requirement Id"
+    }
+  },
+  "semesterFrequency": {
+    "description": "Code used to indicate during what semester(s), Fall and Winter, a course is generally offered.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 1
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Frequency"
+      }
+    },
+    "example": {
+      "value": "A",
+      "api_type": "system",
+      "display_label": "Frequency"
+    }
+  },
+  "specification": {
+    "description": "An academic program rule specification used to apply a rule to a course.",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Specification"
+      }
+    },
+    "example": {
+      "value": "Course",
+      "api_type": "system",
+      "display_label": "Specification"
+    }
+  },
+  "specificationCategory": {
+    "description": "A classification or grouping of an academic program rule specification.",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Category"
+      }
+    },
+    "example": {
+      "value": "Curriculum",
+      "api_type": "system",
+      "display_label": "Category"
+    }
+  },
+  "titleCode": {
+    "description": "Unique identifier of a course within a curriculum unit.",
+    "type": "object",
+    "pattern": "^[0-9]{3}$",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Title Code"
+      }
+    },
+    "example": {
+      "value": "123",
+      "api_type": "system",
+      "display_label": "Title Code"
+    }
+  },
+  "transcriptTitle": {
+    "description": "The official title of a course that is printed on the student's transcript.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Transcript Title"
+      }
+    },
+    "example": {
+      "value": "Topics in Economic Theory",
+      "api_type": "system",
+      "display_label": "Transcript Title"
+    },
+    "cipCode": {
+      "description": "A Classification of Instructional Programs (CIP) to provide a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity.",
+      "type": "Object",
+      "required": [
+        "value"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "system"
+          ],
+          "default": "system"
+        },
+        "key": {
+          "type": "boolean"
+        },
+        "display_label": {
+          "type": "string",
+          "default": "CIP Code"
+        }
+      },
+      "example": {
+        "value": "11.0103",
+        "api_type": "system",
+        "display_label": "CIP Code"
+      }
     }
   },
   "yearsToComplete": {

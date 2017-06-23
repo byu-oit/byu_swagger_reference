@@ -1,0 +1,31 @@
+{
+  "rule": {
+    "description": "An academic program requirement rule resource",
+    "type": "object",
+    "properties": {
+      "specification": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/specification"
+      },
+      "specificationCategory": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/specificationCategory"
+      },
+      "value": {
+          "type": "object"
+        }
+      }
+    },
+    "example": {
+      "specification": {
+        "value": "Course",
+        "api_type": "system",
+        "display_label": "Specification"
+      },
+      "specifcationCategory": {
+        "value": "Curriculum",
+        "api_type": "system",
+        "display_label": "Specification Category"
+      },
+      "value": {"curriculumId": "10648"}
+    }
+  }
+}
