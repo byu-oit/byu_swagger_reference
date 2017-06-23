@@ -31,6 +31,37 @@
       "display_label": "Flag"
     }
   },
+  "dateTimeUpdated": {
+    "description": "A date and time stamp that indicates when the last update event occurred to the associated resource.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "date"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Updated"
+      }
+    },
+    "example": {
+      "value": "2016-08-17T22:18:48.036Z",
+      "api_type": "system",
+      "display_label": "Updated"
+    }
+  },
   "description": {
     "description": "Description of a resource.",
     "type": "Object",
@@ -153,6 +184,37 @@
       "value": "A description",
       "api_type": "system",
       "display_label": "Text"
+    }
+  },
+  "updatedById": {
+    "description": "Identifier of who/what performed to last update of the resource.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Updated By"
+      }
+    },
+    "example": {
+      "value": "A description",
+      "api_type": "system",
+      "display_label": "Updated By"
     }
   }
 }
