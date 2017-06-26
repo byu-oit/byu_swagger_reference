@@ -1,36 +1,4 @@
 {
-  "academicUnitId": {
-    "description": "The unique identifier of an academic unit resource.",
-    "type": "Object",
-    "pattern": "^[0-9]{4}$",
-    "required": [
-      "value"
-    ],
-    "properties": {
-      "value": {
-        "type": "string"
-      },
-      "api_type": {
-        "type": "string",
-        "enum": [
-          "system"
-        ],
-        "default": "system"
-      },
-      "key": {
-        "type": "boolean"
-      },
-      "display_label": {
-        "type": "string",
-        "default": "Academic Unit Id"
-      }
-    },
-    "example": {
-      "value": "1234",
-      "api_type": "system",
-      "display_label": "Academic Unit Id"
-    }
-  },
   "attributeName": {
     "description": "The name of an academic course attribute resource or collection of resources.",
     "type": "Object",
@@ -564,38 +532,6 @@
       "display_label": "Min Grade"
     }
   },
-  "officialName": {
-    "description": "The official name of the academic unit.",
-    "type": "Object",
-    "required": [
-      "value"
-    ],
-    "properties": {
-      "value": {
-        "type": "string",
-        "maxlength": 100
-      },
-      "api_type": {
-        "type": "string",
-        "enum": [
-          "system"
-        ],
-        "default": "system"
-      },
-      "key": {
-        "type": "boolean"
-      },
-      "display_label": {
-        "type": "string",
-        "default": "Official Name"
-      }
-    },
-    "example": {
-      "value": "Recreation Management and Youth Leadership",
-      "api_type": "system",
-      "display_label": "Official Name"
-    }
-  },
   "programId": {
     "description": "Internally generated unique identifier of an academic program definition.",
     "type": "object",
@@ -877,101 +813,6 @@
         "api_type": "system",
         "display_label": "CIP Code"
       }
-    }
-  },
-  "unitLevel": {
-    "description": "The level in the academic unit organization tree hierachy.",
-    "type": "Object",
-    "required": [
-      "value"
-    ],
-    "properties": {
-      "value": {
-        "type": "integer"
-      },
-      "api_type": {
-        "type": "string",
-        "enum": [
-          "system"
-        ],
-        "default": "system"
-      },
-      "key": {
-        "type": "boolean"
-      },
-      "display_label": {
-        "type": "string",
-        "default": "Unit Level"
-      }
-    },
-    "example": {
-      "value": 3,
-      "api_type": "system",
-      "display_label": "Unit Level"
-    }
-  },
-  "unitName": {
-    "description": "The common name of the academic unit.",
-    "type": "Object",
-    "required": [
-      "value"
-    ],
-    "properties": {
-      "value": {
-        "type": "string",
-        "maxlength": 25
-      },
-      "api_type": {
-        "type": "string",
-        "enum": [
-          "system"
-        ],
-        "default": "system"
-      },
-      "key": {
-        "type": "boolean"
-      },
-      "display_label": {
-        "type": "string",
-        "default": "Unit Name"
-      }
-    },
-    "example": {
-      "value": "Recreation Mgt&Yth Ldrshp",
-      "api_type": "system",
-      "display_label": "Unit Name"
-    }
-  },
-  "unitType": {
-    "description": "A short description of the type of academic unit the resource is considered to be.",
-    "type": "Object",
-    "required": [
-      "value"
-    ],
-    "properties": {
-      "value": {
-        "type": "string",
-        "maxlength": 10
-      },
-      "api_type": {
-        "type": "string",
-        "enum": [
-          "system"
-        ],
-        "default": "system"
-      },
-      "key": {
-        "type": "boolean"
-      },
-      "display_label": {
-        "type": "string",
-        "default": "Unit Type"
-      }
-    },
-    "example": {
-      "value": "SCHOOL",
-      "api_type": "system",
-      "display_label": "Unit Type"
     }
   },
   "yearsToComplete": {

@@ -42,7 +42,7 @@
           "href": {
             "type": "string",
             "format": "uri",
-            "default": "https://api.byu.edu/curriculum/v1.0/academicUnit/:academicUnitId"
+            "default": "https://api.byu.edu/academicUnit/v1.0/academicUnit/:academicUnitId"
           },
           "method": {
             "type": "string",
@@ -118,7 +118,7 @@
     "type": "object",
     "properties": {
       "academicUnitId": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/academicUnitId"
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/dataDefinitions.json#/academicUnitId"
       },
       "effectiveDate": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/effectiveDate"
@@ -127,19 +127,19 @@
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredDate"
       },
       "unitType": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitType"
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/dataDefinitions.json#/unitType"
       },
       "unitLevel": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitLevel"
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/dataDefinitions.json#/unitLevel"
       },
       "unitName": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitName"
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/dataDefinitions.json#/unitName"
       },
       "officialName": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitName"
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/dataDefinitions.json#/officialName"
       },
       "parentAcademicUnitId": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/academicUnitId"
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/dataDefinitions.json#/academicUnitId"
       }
     },
     "example": {
@@ -151,7 +151,7 @@
       "links": {
         "academicUnit": {
           "rel": "self",
-          "href": "https://api.byu.edu/curriculum/v1.0/academicUnit/1234",
+          "href": "https://api.byu.edu/academicUnit/v1.0/academicUnit/1234",
           "method": "GET"
         }
       },
@@ -177,7 +177,7 @@
         {
           "basic": {
             "academicUnitId": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/academicUnitId/example"
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/dataDefinitions.json#/academicUnitId/example"
             },
             "effectiveDate": {
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/effectiveDate/example"
@@ -186,19 +186,19 @@
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredDate/example"
             },
             "unitType": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitType/example"
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/dataDefinitions.json#/unitType/example"
             },
             "unitLevel": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitLevel/example"
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/dataDefinitions.json#/unitLevel/example"
             },
             "unitName": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitName/example"
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/dataDefinitions.json#/unitName/example"
             },
             "officialName": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/unitName/example"
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/dataDefinitions.json#/officialName/example"
             },
             "parentAcademicUnitId": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/academicUnitId/example"
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/dataDefinitions.json#/academicUnitId/example"
             }
           }
         }

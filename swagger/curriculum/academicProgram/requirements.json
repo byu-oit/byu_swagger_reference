@@ -139,7 +139,7 @@
       "orgaizationTree": {
         "type": "array",
         "items": {
-          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicUnit/academicUnit.json#/academicUnit"
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/academicUnit"
         }
       },
       "programRequirements": {
@@ -204,7 +204,7 @@
           "orgaizationTree": {
             "type": "array",
             "items": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicUnit/academicUnit.json#/academicUnit/example"
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/academicUnit/example"
             }
           },
           "programRequirements": {
