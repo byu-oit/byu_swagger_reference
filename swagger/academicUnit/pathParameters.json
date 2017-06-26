@@ -1,0 +1,10 @@
+{
+  "academicUnitId": {
+    "name": "Academic Unit Identifier",
+    "in": "path",
+    "description": "Uniquely identifies an academic unit",
+    "required": true,
+    "type": "string",
+    "pattern": "^[0-9]{4}$"
+  }
+}
