@@ -1,6 +1,6 @@
 {
   "curriculumId": {
-    "name": "Curriculum Unit Identifier",
+    "name": "curriculumId",
     "in": "path",
     "description": "Uniquely identifies a curriculum unit",
     "required": true,
@@ -8,7 +8,7 @@
     "pattern": "^[0-9]{5}$"
   },
   "programId": {
-    "name": "Academic Program Identifier",
+    "name": "programId",
     "in": "path",
     "description": "Uniquely identifies an academic program",
     "required": true,
@@ -16,7 +16,7 @@
     "pattern": "^[0-9]{5}$"
   },
   "titleCode": {
-    "name": "Title Code",
+    "name": "titleCode",
     "in": "path",
     "description": "Uniquely identifies a course title within a curriculum unit",
     "required": true,

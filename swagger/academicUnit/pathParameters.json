@@ -1,6 +1,6 @@
 {
   "academicUnitId": {
-    "name": "Academic Unit Identifier",
+    "name": "academicUitId",
     "in": "path",
     "description": "Uniquely identifies an academic unit",
     "required": true,
