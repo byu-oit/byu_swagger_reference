@@ -975,7 +975,7 @@
       "display_label": "Previous Program Id"
     }
   },
-  "programHrs": {
+  "programHours": {
     "description": "The number of hours required to complete the program.",
     "type": "Object",
     "required": [
