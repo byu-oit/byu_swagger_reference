@@ -96,8 +96,7 @@
       }
     },
     "example": {
-      "$ref": "#/x-mock_json/courseAttributes/values/0/basic"
-    }
+      "$ref": "#/x-mock_json/courseAttributes/values"
   },
   "x-mock_json": {
     "courseAttributes": {
