@@ -144,7 +144,7 @@
           }],
         "GEAreas": [
           {
-            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/courseAttribute.json#/courseAttribute"
+            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/course/courseAttribute.json#/courseAttribute"
           }]
       }]
     },
@@ -209,7 +209,7 @@
                 }],
               "GEAreas": [
                 {
-                  "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/courseAttribute.json#/courseAttribute/example"
+                  "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/course/courseAttribute.json#/courseAttribute/example"
                 }]
             }]
           }
