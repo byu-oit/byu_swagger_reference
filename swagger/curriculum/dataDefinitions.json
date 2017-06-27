@@ -187,7 +187,7 @@
       "display_label": "CIP Code"
     }
   },
-  "committee_mem_req": {
+  "committeeMemReq": {
     "description": "The number of committe members.",
     "type": "Object",
     "required": [
@@ -345,7 +345,7 @@
       "display_label": "Degree"
     }
   },
-  "degree_level": {
+  "degreeLevel": {
     "description": "An indication of rigor required to complete the degree for example a degree of level 7 will take longer to complete than a degree of level 4.",
     "type": "Object",
     "required": [
@@ -694,7 +694,7 @@
       "display_label": "Major Program Id"
     }
   },
-  "maxProgramHours": {
+  "maxProgramHrs": {
     "description": "The maximum number of hours required to complete the program.",
     "type": "Object",
     "required": [
@@ -880,7 +880,7 @@
       "display_label": "Min Grade"
     }
   },
-  "minProgramHours": {
+  "minProgramHrs": {
     "description": "The minimum number of hours required to complete the program.",
     "type": "Object",
     "required": [
@@ -975,7 +975,7 @@
       "display_label": "Previous Program Id"
     }
   },
-  "programHours": {
+  "programHrs": {
     "description": "The number of hours required to complete the program.",
     "type": "Object",
     "required": [
@@ -1385,7 +1385,7 @@
       "display_label": "Transcript Title"
     }
   },
-  "valid_admit": {
+  "validAdmit": {
     "description": "????.",
     "type": "Object",
     "required": [
