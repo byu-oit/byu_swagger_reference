@@ -31,6 +31,37 @@
       "display_label": "Flag"
     }
   },
+  "comments": {
+    "description": "Text comments with a resource.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Comments"
+      }
+    },
+    "example": {
+      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "api_type": "system",
+      "display_label": "Comments"
+    }
+  },
   "dateTimeUpdated": {
     "description": "A date and time stamp that indicates when the last update event occurred to the associated resource.",
     "type": "Object",
@@ -181,7 +212,7 @@
       }
     },
     "example": {
-      "value": "A description",
+      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "api_type": "system",
       "display_label": "Text"
     }

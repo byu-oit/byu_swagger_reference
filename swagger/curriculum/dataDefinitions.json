@@ -133,7 +133,7 @@
   "properties": {
     "value": {
       "type": "string",
-      "maxlength": 1
+      "maxLength": 1
     },
     "api_type": {
       "type": "string",
@@ -155,7 +155,70 @@
     "api_type": "system",
     "display_label": "Catalog Suffix"
   }
-},"creditInstitution": {
+},
+  "cipCode": {
+    "description": "A Classification of Instructional Programs (CIP) to provide a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "CIP Code"
+      }
+    },
+    "example": {
+      "value": "11.0103",
+      "api_type": "system",
+      "display_label": "CIP Code"
+    }
+  },
+  "committee_mem_req": {
+    "description": "The number of committe members.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "integer"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Committee Members"
+      }
+    },
+    "example": {
+      "value": 5,
+      "api_type": "system",
+      "display_label": "Committee Members"
+    }
+  },
+  "creditInstitution": {
     "description": "Institution associated with this resource.",
     "type": "object",
     "required": [
@@ -185,38 +248,6 @@
       "value": "BYU PROVO",
       "api_type": "system",
       "display_label": "Institution"
-    }
-  },
-  "deptName": {
-    "description": " An abbreviation of the primary subject content of the course.  Also known as a teaching area or subject code.",
-    "type": "Object",
-    "required": [
-      "value"
-    ],
-    "properties": {
-      "value": {
-        "type": "string",
-        "maxLength": 5
-      },
-      "api_type": {
-        "type": "string",
-        "enum": [
-          "system"
-        ],
-        "default": "system"
-      },
-      "key": {
-        "type": "boolean"
-      },
-      "display_label": {
-        "type": "string",
-        "default": "Dept Name"
-      }
-    },
-    "example": {
-      "value": "ECON",
-      "api_type": "system",
-      "display_label": "Dept Name"
     }
   },
   "creditHours": {
@@ -282,6 +313,70 @@
       "display_label": "Curriculum Id"
     }
   },
+  "degree": {
+    "description": "An abbreviation of the degree, i.e. BS for Bachelor of Science.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 4
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Degree"
+      }
+    },
+    "example": {
+      "value": "BS",
+      "api_type": "system",
+      "display_label": "Degree"
+    }
+  },
+  "degree_level": {
+    "description": "An indication of rigor required to complete the degree for example a degree of level 7 will take longer to complete than a degree of level 4.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 1
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Degree Level"
+      }
+    },
+    "example": {
+      "value": "BS",
+      "api_type": "system",
+      "display_label": "Degree Level"
+    }
+  },
   "diplomaDesc": {
     "description": "Text to be printed/displayed on a diploma earned with a degree in the associated academic program.",
     "type": "Object",
@@ -344,6 +439,38 @@
       "display_label": "Display Order"
     }
   },
+  "minorReq": {
+    "description": "A flag used to indicate if an academic program requires that a student also complete a minor.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 1
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Emphasis Required"
+      }
+    },
+    "example": {
+      "value": "F",
+      "api_type": "system",
+      "display_label": "Emphasis Required"
+    }
+  },
   "fixedOrVariable": {
     "description": "Code used to indicate if a course allows variable credits.",
     "type": "Object",
@@ -376,6 +503,102 @@
       "display_label": "Fixed or Variable"
     }
   },
+  "geProgramId": {
+    "description": "Links the general education requirements to an academic program.",
+    "type": "object",
+    "pattern": "^[0-9]{5}$",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "GE Program Id"
+      }
+    },
+    "example": {
+      "value": "12345",
+      "api_type": "system",
+      "display_label": "GE Program Id"
+    }
+  },
+  "honorsRec": {
+    "description": "A flag used to indicate if an academic program provides honor recognition.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 1
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Honors Recognition"
+      }
+    },
+    "example": {
+      "value": "F",
+      "api_type": "system",
+      "display_label": "Honors Recognition"
+    }
+  },
+  "limEnrProgram": {
+    "description": "Flag used to indicated this academic program is a limited enrollment program and requires acceptance into the program by the academic unit offering the program.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 1
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Teaching Program"
+      }
+    },
+    "example": {
+      "value": "BS",
+      "api_type": "system",
+      "display_label": "Teaching Program"
+    }
+  },
   "longDesc": {
     "description": "A longer textual description of an Academic Program.",
     "type": "Object",
@@ -405,37 +628,6 @@
       "value": "This academic program is designed to ...",
       "api_type": "system",
       "display_label": "Full Description"
-    },
-    "cipCode": {
-      "description": "A Classification of Instructional Programs (CIP) to provide a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity.",
-      "type": "Object",
-      "required": [
-        "value"
-      ],
-      "properties": {
-        "value": {
-          "type": "string"
-        },
-        "api_type": {
-          "type": "string",
-          "enum": [
-            "system"
-          ],
-          "default": "system"
-        },
-        "key": {
-          "type": "boolean"
-        },
-        "display_label": {
-          "type": "string",
-          "default": "CIP Code"
-        }
-      },
-      "example": {
-        "value": "11.0103",
-        "api_type": "system",
-        "display_label": "CIP Code"
-      }
     }
   },
   "majorCode": {
@@ -468,6 +660,162 @@
       "value": "12345",
       "api_type": "system",
       "display_label": "Major Code"
+    }
+  },
+  "majorProgramId": {
+    "description": "Links an undergraduate academic program to a graduate level academic program.",
+    "type": "object",
+    "pattern": "^[0-9]{5}$",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Major Program Id"
+      }
+    },
+    "example": {
+      "value": "12345",
+      "api_type": "system",
+      "display_label": "Major Program Id"
+    }
+  },
+  "maxProgramHours": {
+    "description": "The maximum number of hours required to complete the program.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "integer"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Max Program Hours"
+      }
+    },
+    "example": {
+      "value": 4,
+      "api_type": "system",
+      "display_label": "Max Program Hours"
+    }
+  },
+  "maxRClasses": {
+    "description": "The maximum number of repeatable classes that are allowed (appears to be obsolete or not used).",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "integer"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Max R Classes"
+      }
+    },
+    "example": {
+      "value": 4,
+      "api_type": "system",
+      "display_label": "Max R Classes"
+    }
+  },
+  "maxRHours": {
+    "description": "The maximum number of hours that can be accumulated in repeatable courses (appears to be obsolete or not used)",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "integer"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Max R Hours"
+      }
+    },
+    "example": {
+      "value": 4,
+      "api_type": "system",
+      "display_label": "Max R Hours"
+    }
+  },
+  "maxYrsCompl": {
+    "description": "The maximum number of years it is expected to take to complete an academic program.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "integer"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Max Years To Complete"
+      }
+    },
+    "example": {
+      "value": 4,
+      "api_type": "system",
+      "display_label": "Max Years To Complete"
     }
   },
   "minCreditHours": {
@@ -530,6 +878,132 @@
       "value": "C-",
       "api_type": "system",
       "display_label": "Min Grade"
+    }
+  },
+  "minProgramHours": {
+    "description": "The minimum number of hours required to complete the program.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "integer"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Min Program Hours"
+      }
+    },
+    "example": {
+      "value": 4,
+      "api_type": "system",
+      "display_label": "Min Program Hours"
+    }
+  },
+  "emphasisReq": {
+    "description": "A flag used to indicate if an academic program requires that a student declare a specific emphasis within the program.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 1
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Emphasis Required"
+      }
+    },
+    "example": {
+      "value": "F",
+      "api_type": "system",
+      "display_label": "Emphasis Required"
+    }
+  },
+  "prevProgramId": {
+    "description": "Optionally identifies the academic program of origin.",
+    "type": "object",
+    "pattern": "^[0-9]{5}$",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Previous Program Id"
+      }
+    },
+    "example": {
+      "value": "12345",
+      "api_type": "system",
+      "display_label": "Previous Program Id"
+    }
+  },
+  "programHours": {
+    "description": "The number of hours required to complete the program.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "integer"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Program Hours"
+      }
+    },
+    "example": {
+      "value": 4,
+      "api_type": "system",
+      "display_label": "Program Hours"
     }
   },
   "programId": {
@@ -627,6 +1101,37 @@
       "display_label": "Requirement Id"
     }
   },
+  "residenceHrs": {
+    "description": "The number of residence hours required to complete the program.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "integer"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Residence Hours"
+      }
+    },
+    "example": {
+      "value": 4,
+      "api_type": "system",
+      "display_label": "Residence Hours"
+    }
+  },
   "semesterFrequency": {
     "description": "Code used to indicate during what semester(s), Fall and Winter, a course is generally offered.",
     "type": "Object",
@@ -721,6 +1226,102 @@
       "display_label": "Category"
     }
   },
+  "studyListRequired": {
+    "description": "A flag used to indicate if an academic program requires a study list.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 1
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Study List Required"
+      }
+    },
+    "example": {
+      "value": "F",
+      "api_type": "system",
+      "display_label": "Study List Required"
+    }
+  },
+  "subjectArea": {
+    "description": " An abbreviation of the primary subject content of the course.  Also known as a teaching area or subject code a depricated use has been dept name.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 5
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Subject Area"
+      }
+    },
+    "example": {
+      "value": "ECON",
+      "api_type": "system",
+      "display_label": "Subject Area"
+    }
+  },
+  "teachingProgram": {
+    "description": "Flag used to indicated that this academic program is associated with a teaching certificate.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 1
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Teaching Program"
+      }
+    },
+    "example": {
+      "value": "BS",
+      "api_type": "system",
+      "display_label": "Teaching Program"
+    }
+  },
   "titleCode": {
     "description": "Unique identifier of a course within a curriculum unit.",
     "type": "object",
@@ -782,37 +1383,38 @@
       "value": "Topics in Economic Theory",
       "api_type": "system",
       "display_label": "Transcript Title"
-    },
-    "cipCode": {
-      "description": "A Classification of Instructional Programs (CIP) to provide a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity.",
-      "type": "Object",
-      "required": [
-        "value"
-      ],
-      "properties": {
-        "value": {
-          "type": "string"
-        },
-        "api_type": {
-          "type": "string",
-          "enum": [
-            "system"
-          ],
-          "default": "system"
-        },
-        "key": {
-          "type": "boolean"
-        },
-        "display_label": {
-          "type": "string",
-          "default": "CIP Code"
-        }
+    }
+  },
+  "valid_admit": {
+    "description": "????.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 1
       },
-      "example": {
-        "value": "11.0103",
-        "api_type": "system",
-        "display_label": "CIP Code"
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Valid Admit"
       }
+    },
+    "example": {
+      "value": "BS",
+      "api_type": "system",
+      "display_label": "Valid Admit"
     }
   },
   "yearsToComplete": {
