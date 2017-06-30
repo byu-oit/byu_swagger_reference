@@ -118,7 +118,7 @@
     "type": "object",
     "properties": {
       "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/academicProgram.json#/academicProgram/basic",
-      "cipCode": {
+      "programId": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/programId"
       },
       "furloughed": {
