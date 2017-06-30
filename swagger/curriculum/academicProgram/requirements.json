@@ -11,12 +11,12 @@
       },
       "values": {
         "basic": {
-          "$ref": "#/yellow"
+          "$ref": "#/basic"
         }
       }
     },
     "example": {
-      "$ref": "#/x-mock_json/requirements/yellow"
+      "$ref": "#/x-mock_json/requirements"
     }
   },
   "links": {
