@@ -16,7 +16,7 @@
       }
     },
     "example": {
-      "$ref": "#/x-mock_json/requirements"
+      "$ref": "#/x-mock_json/requirements/yellow"
     }
   },
   "links": {
