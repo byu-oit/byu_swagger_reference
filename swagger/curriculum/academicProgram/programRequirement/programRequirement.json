@@ -118,7 +118,7 @@
     "type": "object",
     "properties": {
       "requirementId": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/programRequirementId"
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/requirementId"
       },
       "rules": [
         {
@@ -183,7 +183,7 @@
         {
           "basic": {
             "requirementId": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/programRequirementId/example"
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/requirementId/example"
             },
             "rules": [
               {

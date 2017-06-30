@@ -10,8 +10,7 @@
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/specificationCategory"
       },
       "value": {
-          "type": "object"
-        }
+        "type": "object"
       }
     },
     "example": {
@@ -25,7 +24,9 @@
         "api_type": "system",
         "display_label": "Specification Category"
       },
-      "value": {"curriculumId": "10648"}
+      "value": {
+        "curriculumId": "10648"
+      }
     }
   }
 }
