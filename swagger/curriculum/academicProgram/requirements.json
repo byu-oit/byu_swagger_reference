@@ -1,5 +1,5 @@
 {
-  "academicProgramRequirements": {
+  "requirements": {
     "description": "An academic program requirements resource",
     "type": "object",
     "properties": {
@@ -10,8 +10,8 @@
         "$ref": "#/metadata"
       },
       "values": {
-        "requirements": {
-          "$ref": "#/requirements"
+        "basic": {
+          "$ref": "#/basic"
         }
       }
     },
@@ -23,7 +23,7 @@
     "description": "Hypermedia Links for an academic program requirements resource",
     "type": "object",
     "properties": {
-      "academicProgramRequirements": {
+      "requirements": {
         "description": "Hypermedia link to retrieve this academic program requirements resource",
         "type": "object",
         "required": [
@@ -65,7 +65,7 @@
             "items": {
               "type": "string",
               "enum": [
-                "requirements"
+                "basic"
               ]
             }
           },
@@ -74,7 +74,7 @@
             "items": {
               "type": "string",
               "enum": [
-                "requirements"
+                "basic"
               ]
             }
           },
@@ -83,7 +83,7 @@
             "items": {
               "type": "string",
               "enum": [
-                "requirements"
+                "basic"
               ]
             }
           },
@@ -96,7 +96,7 @@
                 "items": {
                   "type": "string",
                   "enum": [
-                    "requirements"
+                    "basic"
                   ]
                 }
               }
@@ -113,7 +113,7 @@
       }
     ]
   },
-  "requirements": {
+  "basic": {
     "description": "Field set for an academic program requirements resource",
     "type": "object",
     "properties": {
@@ -145,18 +145,18 @@
       "programRequirements": {
         "type": "array",
         "items": {
-          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirements.json#/programRequirements"
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement.json#/programRequirement"
         }
       }
     },
     "example": {
-      "$ref": "#/x-mock_json/academicProgram/values/0/requirements"
+      "$ref": "#/x-mock_json/requirements/values/0"
     }
   },
   "x-mock_json": {
-    "academicProgramRequirements": {
+    "requirements": {
       "links": {
-        "academicProgramRequirements": {
+        "requirements": {
           "rel": "self",
           "href": "https://api.byu.edu/curriculum/v1.0/academicProgram/12345/requirements",
           "method": "GET"
@@ -164,14 +164,14 @@
       },
       "metadata": {
         "field_sets_returned": [
-          "requirements"
+          "basic"
         ],
         "field_sets_available": [
-          "requirements"
+          "basoc"
         ],
         "contexts_available": {
           "all": [
-            "requirements"
+            "basic"
           ]
         },
         "collection_size": 1,
@@ -210,7 +210,7 @@
           "programRequirements": {
             "type": "array",
             "items": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirements.json#/programRequirements/example"
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement.json#/programRequirement/example"
             }
           }
         }
