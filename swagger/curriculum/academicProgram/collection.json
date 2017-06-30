@@ -123,7 +123,7 @@
       "links": {
         "collection": {
           "rel": "self",
-          "href": "https://api.byu.edu/curriculum/v1.0/academicPrograms?yearTerm=20175&offset=0&limit=1&asOf=2018-01-07",
+          "href": "https://api.byu.edu/curriculum/v1.0/academicPrograms?yearTerm=20175&offset=0&limit=1&asOf=2017-10-20",
           "method": "GET"
         }
       },
