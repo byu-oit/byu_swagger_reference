@@ -134,9 +134,6 @@
       "displayOrder": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/displayOrder"
       },
-      "childRequirements": [{
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement/programRequirement.json#/programRequirement"
-      }],
       "programClassAttributes": [{
         "catalogDescriptions": [
           {
@@ -199,9 +196,6 @@
             "displayOrder": {
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/displayOrder/example"
             },
-            "childRequirements": [{
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement/programRequirement.json#/programRequirement/example"
-            }],
             "programClassAttributes": [{
               "catalogDescriptions": [
                 {
