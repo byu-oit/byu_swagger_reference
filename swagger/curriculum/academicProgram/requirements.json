@@ -145,7 +145,7 @@
       "programRequirements": {
         "type": "array",
         "items": {
-          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement.json#/programRequirement"
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement/programRequirement.json#/programRequirement"
         }
       }
     },
@@ -210,7 +210,7 @@
           "programRequirements": {
             "type": "array",
             "items": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement.json#/programRequirement/example"
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement/programRequirement.json#/programRequirement/example"
             }
           }
         }
