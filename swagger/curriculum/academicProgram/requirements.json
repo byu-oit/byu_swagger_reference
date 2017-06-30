@@ -117,9 +117,7 @@
     "description": "Field set for an academic program requirements resource",
     "type": "object",
     "properties": {
-      "basic": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/academicProgram.json#/basic"
-      },
+      "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/academicProgram.json#/basic",
       "cipCode": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/cipCode"
       },
@@ -184,9 +182,7 @@
       },
       "values": [
         {
-          "basic": {
-            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/academicProgram.json#/basic/example"
-          },
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/academicProgram.json#/basic/example",
           "cipCode": {
             "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/cipCode/example"
           },
