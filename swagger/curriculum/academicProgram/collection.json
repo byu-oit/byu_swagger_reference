@@ -101,6 +101,9 @@
             "type": "integer",
             "minimum": 0
           },
+          "yearTerm": {
+            "type": "string"
+          },
           "offset": {
             "type": "integer",
             "minimum": 0,
@@ -110,6 +113,9 @@
             "type": "integer",
             "minimum": 1,
             "default": 100
+          },
+          "asOf": {
+            "type": "string"
           }
         }
       },
@@ -123,7 +129,7 @@
       "links": {
         "collection": {
           "rel": "self",
-          "href": "https://api.byu.edu/curriculum/v1.0/academicPrograms?yearTerm=20175&offset=0&limit=1&asOf=2018-01-01",
+          "href": "https://api.byu.edu/curriculum/v1.0/academicPrograms?yearTerm=20175&offset=0&limit=100&asOf=2018-01-01",
           "method": "GET"
         }
       },
@@ -140,8 +146,10 @@
           ]
         },
         "collection_size": 1,
+        "yearTerm": "20175",
         "offset": 0,
         "limit": 100,
+        "asOf": "Today",
         "validation_response": {
           "return_code": 200,
           "response": "Retrieve Successful"
