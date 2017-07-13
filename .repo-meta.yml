@@ -1,5 +1,5 @@
 ---
-$schemaver: 2.0
+$schemaver: '2.0'
 repo_url: https://github.com/byu-oit/byu_swagger_reference
 software:
   - name: byu_swagger_reference
