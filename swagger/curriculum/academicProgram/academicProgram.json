@@ -10,6 +10,9 @@
         "$ref": "#/metadata"
       },
       "values": {
+        "title": {
+          "$ref": "#/title"
+        },
         "basic": {
           "$ref": "#/basic"
         }
