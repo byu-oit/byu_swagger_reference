@@ -167,7 +167,7 @@
     "properties": {
       "allOf": [
         {
-          "$ref": "#/title"
+          "$ref": "#/title/properties"
         },
         {
           "validAdmit": {
