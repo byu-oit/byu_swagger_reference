@@ -69,9 +69,7 @@
               "type": "string",
               "enum": [
                 "identifying",
-                "controls",
-                "organization",
-                "requirements"
+                "controls"
               ]
             }
           },
@@ -81,9 +79,7 @@
               "type": "string",
               "enum": [
                 "identifying",
-                "controls",
-                "organization",
-                "requirements"
+                "controls"
               ]
             }
           },
@@ -107,18 +103,6 @@
                   "enum": [
                     "identifying",
                     "controls"
-                  ]
-                }
-              },
-              "all": {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "enum": [
-                    "identifying",
-                    "controls",
-                    "organization",
-                    "requirements"
                   ]
                 }
               }
@@ -264,38 +248,6 @@
       "$ref": "#/x-mock_json/academicProgram/values/0/controls"
     }
   },
-  "orgaization": {
-    "description": "Organization heirarchy that is sponsoring the academic program.",
-    "type": "object",
-    "properties": {
-      "type": "array",
-      "items": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/academicUnit"
-      }
-    },
-    "example": {
-      "type": "array",
-      "items": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement/programRequirement.json#/programRequirement/example"
-      }
-    }
-  },
-  "requirements": {
-    "description": "Requirements used to determine completion and progress towards the degree.",
-    "type": "object",
-    "properties": {
-      "type": "array",
-      "items": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement/programRequirement.json#/programRequirement"
-      }
-    },
-    "example": {
-      "type": "array",
-      "items": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement/programRequirement.json#/programRequirement/example"
-      }
-    }
-  },
   "x-mock_json": {
     "academicProgram": {
       "links": {
@@ -308,20 +260,15 @@
       "metadata": {
         "field_sets_returned": [
           "identifying",
-          "controls",
-          "organization",
-          "requirements"
+          "controls"
         ],
         "field_sets_available": [
           "identifying",
-          "controls",
-          "organization",
-          "requirements"
+          "controls"
         ],
         "contexts_available": {
           "all": [
-            "basic",
-            "all"
+            "basic"
           ]
         },
         "collection_size": 1,
@@ -445,18 +392,6 @@
             },
             "yearsToComplete": {
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/yearsToComplete/example"
-            }
-          },
-          "orgaization": {
-            "type": "array",
-            "items": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/academicUnit/example"
-            }
-          },
-          "requirements": {
-            "type": "array",
-            "items": {
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement/programRequirement.json#/programRequirement/example"
             }
           }
         }
