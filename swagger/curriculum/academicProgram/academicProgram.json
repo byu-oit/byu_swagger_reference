@@ -183,8 +183,8 @@
       "$ref": "#/x-mock_json/academicProgram/values/0/identifying"
     }
   },
-  "details": {
-    "description": "Details field set for an academic program resource.  Includes flags and other values that are used to determine enrollment availability and progress towards the degree.",
+  "controls": {
+    "description": "Controls field set for an academic program resource.  Includes flags and other values that are used to determine enrollment availability and progress towards the degree.",
     "type": "object",
     "properties": {
       "validAdmit": {
