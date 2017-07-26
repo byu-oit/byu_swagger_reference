@@ -255,19 +255,14 @@
   },
   "academicUnits": {
     "description": "Academic unit organization heirarchy that is sponsoring the academic program.",
-    "type": "object",
+    "type": "array",
     "properties": {
-      "type": "array",
-      "items": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/academicUnit"
-      }
     },
-    "example": {
-      "type": "array",
-      "items": {
+    "example": [{
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement/programRequirement.json#/programRequirement/example"
       }
-    }
+    ]
   },
   "x-mock_json": {
     "academicProgram": {
@@ -418,12 +413,10 @@
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/yearsToComplete/example"
             }
           },
-          "academicUnits": {
-            "type": "array",
-            "items": {
+          "academicUnits": [{
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/academicUnit/example"
             }
-          }
+          ]
         }
       ]
     }
