@@ -267,8 +267,9 @@
           "controls"
         ],
         "contexts_available": {
-          "all": [
-            "basic"
+          "basic": [
+            "identifying",
+            "controls"
           ]
         },
         "collection_size": 1,
