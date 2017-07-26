@@ -16,8 +16,11 @@
         "controls": {
           "$ref": "#/controls"
         },
-        "academicUnits": {
-          "$ref": "#/academicUnits"
+        "academicUnitHierarchy": {
+          "$ref": "#/academicUnitHierarchy"
+        },
+        "requirements": {
+          "$ref": "#/requirements"
         }
       }
     },
@@ -73,7 +76,8 @@
               "enum": [
                 "identifying",
                 "controls",
-                "academicUnits"
+                "academicUnitHierarchy",
+                "requirements"
               ]
             }
           },
@@ -84,7 +88,8 @@
               "enum": [
                 "identifying",
                 "controls",
-                "academicUnits"
+                "academicUnitHierarchy",
+                "requirements"
               ]
             }
           },
@@ -108,6 +113,18 @@
                   "enum": [
                     "identifying",
                     "controls"
+                  ]
+                }
+              },
+              "all": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "identifying",
+                    "controls",
+                    "academicUnitHierarchy",
+                    "requirements"
                   ]
                 }
               }
@@ -253,17 +270,28 @@
       "$ref": "#/x-mock_json/academicProgram/values/0/controls"
     }
   },
-  "academicUnits": {
+  "academicUnitHierarchy": {
     "description": "Academic unit organization heirarchy that is sponsoring the academic program.",
     "type": "array",
     "properties": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/academicUnit"
     },
     "example": [{
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement/programRequirement.json#/programRequirement/example"
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/academicUnit/example"
       }
     ]
   },
+  "requirements": {
+  "description": "The requirements used to determined progress to degree.",
+  "type": "array",
+  "properties": {
+    "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement/programRequirement.json#/programRequirement"
+  },
+  "example": [{
+    "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement/programRequirement.json#/programRequirement/example"
+  }
+  ]
+},
   "x-mock_json": {
     "academicProgram": {
       "links": {
@@ -277,17 +305,25 @@
         "field_sets_returned": [
           "identifying",
           "controls",
-          "academicUnits"
+          "academicUnitHierarchy",
+          "requirements"
         ],
         "field_sets_available": [
           "identifying",
           "controls",
-          "academicUnits"
+          "academicUnitHierarchy",
+          "requirements"
         ],
         "contexts_available": {
           "basic": [
             "identifying",
             "controls"
+          ],
+          "all": [
+            "identifying",
+            "controls",
+            "academicUnitHierarchy",
+            "requirements"
           ]
         },
         "collection_size": 1,
@@ -413,8 +449,12 @@
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/yearsToComplete/example"
             }
           },
-          "academicUnits": [{
+          "academicUnitHierarchy": [{
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/academicUnit/example"
+            }
+          ],
+          "requirements": [{
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement/programRequirement.json#/programRequirement/example"
             }
           ]
         }
