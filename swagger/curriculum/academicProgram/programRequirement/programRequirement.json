@@ -121,6 +121,7 @@
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/requirementId"
       },
       "childRequirements": [{
+        "$ref": "#/programRequirement"
       }],
       "rules": [
         {
@@ -184,7 +185,7 @@
             "requirementId": {
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/requirementId/example"
             },
-            "childRequirements": [{"a":"B", "C": "D"}, {"X":"UY", "Z": "DN"}, {"U":"K", "CL": "DB"}],
+            "childRequirements": [],
             "rules": [
               {
                 "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/programRequirement/rule.json#/rule/example"
