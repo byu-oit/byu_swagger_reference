@@ -43,6 +43,20 @@
       "description": "a date in the form of 'YYYY-MM-DD' or a date specification, such as 'Today', 'Yesterday', or '10 years ago', that will filter the resulting resources to be resources that are effective as of the date provided.",
       "required": false,
       "type": "string"
+    },
+    "context": {
+      "name": "context",
+      "in": "query",
+      "description": "A context implies the result will contain one or more fieldsets as specified by the context.",
+      "required": false,
+      "type": "string"
+    },
+    "fieldsets": {
+      "name": "fieldsets",
+      "in": "query",
+      "description": "A comma deliminated list of desired fieldsets i.e. 'fieldset1, fieldset2'.",
+      "required": false,
+      "type": "string"
     }
   },
   "responses": {
