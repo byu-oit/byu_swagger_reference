@@ -274,10 +274,10 @@
     "description": "Academic unit organization heirarchy that is sponsoring the academic program.",
     "type": "array",
     "properties": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/basic/properties"
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/academicProgram"
     },
     "example": [{
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/basic/example"
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/academicProgram/example"
       }
     ]
   },
