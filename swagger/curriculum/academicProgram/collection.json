@@ -55,48 +55,6 @@
       {
         "type": "object",
         "properties": {
-          "field_sets_returned": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "identifying"
-              ]
-            }
-          },
-          "field_sets_available": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "identifying"
-              ]
-            }
-          },
-          "field_sets_default": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "identifying"
-              ]
-            }
-          },
-          "contexts_available": {
-            "description": "Contexts available for a collection of academic program resources",
-            "type": "object",
-            "properties": {
-              "identifying": {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "enum": [
-                    "identifying"
-                  ]
-                }
-              }
-            }
-          },
           "collection_size": {
             "type": "integer",
             "minimum": 0
@@ -134,17 +92,6 @@
         }
       },
       "metadata": {
-        "field_sets_returned": [
-          "identifying"
-        ],
-        "field_sets_available": [
-          "identifying"
-        ],
-        "contexts_available": {
-          "identifying": [
-            "identifying"
-          ]
-        },
         "collection_size": 1,
         "yearTerm": "20175",
         "offset": 0,
