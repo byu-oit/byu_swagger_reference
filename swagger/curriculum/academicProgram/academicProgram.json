@@ -288,7 +288,7 @@
       "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/requirements.json#/requirements"
     },
     "example": {
-      "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum//academicProgram/requirements.json#/requirements/example"
+      "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/requirements.json#/requirements/example"
     }
   },
   "x-mock_json": {
@@ -449,11 +449,11 @@
             }
           },
           "academicUnitHierarchy": [{
-              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum//academicUnit/academicUnit.json#/academicUnit/example"
+              "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/academicUnit/example"
             }
           ],
           "requirements": {
-            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum//academicProgram/requirements.json#/requirements/example"
+            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/requirements.json#/requirements/example"
           }
         }
       ]
