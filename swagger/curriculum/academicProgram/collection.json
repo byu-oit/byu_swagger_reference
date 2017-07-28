@@ -60,7 +60,7 @@
             "items": {
               "type": "string",
               "enum": [
-                "basic"
+                "identifying"
               ]
             }
           },
@@ -69,7 +69,7 @@
             "items": {
               "type": "string",
               "enum": [
-                "basic"
+                "identifying"
               ]
             }
           },
@@ -78,7 +78,7 @@
             "items": {
               "type": "string",
               "enum": [
-                "basic"
+                "identifying"
               ]
             }
           },
@@ -86,12 +86,12 @@
             "description": "Contexts available for a collection of academic program resources",
             "type": "object",
             "properties": {
-              "basic": {
+              "identifying": {
                 "type": "array",
                 "items": {
                   "type": "string",
                   "enum": [
-                    "basic"
+                    "identifying"
                   ]
                 }
               }
@@ -135,14 +135,14 @@
       },
       "metadata": {
         "field_sets_returned": [
-          "basic"
+          "identifying"
         ],
         "field_sets_available": [
-          "basic"
+          "identifying"
         ],
         "contexts_available": {
-          "basic": [
-            "basic"
+          "identifying": [
+            "identifying"
           ]
         },
         "collection_size": 1,
