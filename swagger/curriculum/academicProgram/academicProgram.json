@@ -283,12 +283,13 @@
   },
   "requirements": {
     "description": "The requirements used to determined progress to degree.",
-    "type": "array",
+    "type": "object",
     "properties": {
+      "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicProgram/requirements.json#/requirements"
     },
-    "example": [{
-      }
-    ]
+    "example": {
+      "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicProgram/requirements.json#/requirements/example"
+    }
   },
   "x-mock_json": {
     "academicProgram": {
@@ -451,9 +452,9 @@
               "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicUnit/academicUnit.json#/academicUnit/example"
             }
           ],
-          "requirements": [{
-            }
-          ]
+          "requirements": {
+            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/academicProgram/requirements.json#/requirements/example"
+          }
         }
       ]
     }
