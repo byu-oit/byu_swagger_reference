@@ -9,7 +9,7 @@
       "metadata": {
         "$ref": "#/metadata"
       },
-      "values": {
+      "value": {
         "identifying": {
           "$ref": "#/identifying"
         },
@@ -334,7 +334,7 @@
           "response": "Retrieve Successful"
         }
       },
-      "values": [
+      "value":
         {
           "identifying": {
             "creditInstitution": {
@@ -459,7 +459,6 @@
             "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/academicProgram/requirements.json#/requirements/example"
           }
         }
-      ]
     }
   }
 }
