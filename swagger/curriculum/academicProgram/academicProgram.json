@@ -189,7 +189,7 @@
       }
     },
     "example": {
-      "$ref": "#/x-mock_json/academicProgram/values/0/identifying"
+      "$ref": "#/x-mock_json/academicProgram/value/identifying"
     }
   },
   "controls": {
@@ -270,7 +270,7 @@
       }
     },
     "example": {
-      "$ref": "#/x-mock_json/academicProgram/values/0/controls"
+      "$ref": "#/x-mock_json/academicProgram/value/controls"
     }
   },
   "academicUnitHierarchy": {
