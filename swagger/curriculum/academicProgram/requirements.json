@@ -25,7 +25,7 @@
       }
     },
     "example": {
-      "value": [
+      "values": [
         {
           "requirementId": "e52de6f0c2f55fd3e0aab243443d068a",
           "rules": [
