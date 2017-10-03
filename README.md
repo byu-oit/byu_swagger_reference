@@ -5,6 +5,8 @@ Add common or shared swagger references here and use the https://raw.githubuserc
 
 Example:
 
+````json
+
   "parameters": [
     {
       "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/pathParameters.json#/curriculumId"
@@ -13,3 +15,5 @@ Example:
       "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/pathParameters.json#/titleCode"
     }
   ]
+
+````
