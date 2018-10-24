@@ -1,4 +1,30 @@
 {
+  "allowFlexTitle": {
+    "description": "Boolean on whether or not multiple titles are allowed",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Allow Flex Title"
+      }
+    }
+  },
   "attributeName": {
     "description": "The name of an academic course attribute resource or collection of resources.",
     "type": "Object",
@@ -156,6 +182,32 @@
     "display_label": "Catalog Suffix"
   }
 },
+  "catalogTitleCode": {
+    "description": "The catalog title code",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Catalog Title Code"
+      }
+    }
+  },
   "cipCode": {
     "description": "A Classification of Instructional Programs (CIP) to provide a taxonomic scheme that supports the accurate tracking and reporting of fields of study and program completions activity.",
     "type": "Object",
@@ -281,6 +333,62 @@
       "display_label": "Credit Hours"
     }
   },
+  "crossListFlag": {
+    "description": "The cross list flag",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Cross List Flag"
+      }
+    }
+  },
+  "curriculumEdits": {
+    "description": "Changes made to the curriculum object",
+    "type": "Array",
+    "items": {
+      "description": "Change made to the curriculum object",
+      "type": "Object",
+      "required": [
+        "value"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "system"
+          ],
+          "default": "system"
+        },
+        "key": {
+          "type": "boolean"
+        },
+        "display_label": {
+          "type": "string",
+          "default": "Edits"
+        }
+      }
+    }
+  },
   "curriculumId": {
     "description": "Unique identifier of for a curriculum unit.",
     "type": "object",
@@ -311,6 +419,38 @@
       "value": "12345",
       "api_type": "system",
       "display_label": "Curriculum Id"
+    }
+  },
+  "emphasisReq": {
+    "description": "A flag used to indicate if an academic program requires that a student declare a specific emphasis within the program.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 1
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Emphasis Required"
+      }
+    },
+    "example": {
+      "value": "F",
+      "api_type": "system",
+      "display_label": "Emphasis Required"
     }
   },
   "degree": {
@@ -437,38 +577,6 @@
       "value": 1,
       "api_type": "system",
       "display_label": "Display Order"
-    }
-  },
-  "minorReq": {
-    "description": "A flag used to indicate if an academic program requires that a student also complete a minor.",
-    "type": "Object",
-    "required": [
-      "value"
-    ],
-    "properties": {
-      "value": {
-        "type": "string",
-        "maxLength": 1
-      },
-      "api_type": {
-        "type": "string",
-        "enum": [
-          "system"
-        ],
-        "default": "system"
-      },
-      "key": {
-        "type": "boolean"
-      },
-      "display_label": {
-        "type": "string",
-        "default": "Emphasis Required"
-      }
-    },
-    "example": {
-      "value": "F",
-      "api_type": "system",
-      "display_label": "Emphasis Required"
     }
   },
   "fixedOrVariable": {
@@ -880,6 +988,38 @@
       "display_label": "Min Grade"
     }
   },
+  "minorReq": {
+    "description": "A flag used to indicate if an academic program requires that a student also complete a minor.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 1
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Emphasis Required"
+      }
+    },
+    "example": {
+      "value": "F",
+      "api_type": "system",
+      "display_label": "Emphasis Required"
+    }
+  },
   "minProgramHrs": {
     "description": "The minimum number of hours required to complete the program.",
     "type": "Object",
@@ -911,16 +1051,15 @@
       "display_label": "Min Program Hours"
     }
   },
-  "emphasisReq": {
-    "description": "A flag used to indicate if an academic program requires that a student declare a specific emphasis within the program.",
+  "origDeptName": {
+    "description": "The original Department name",
     "type": "Object",
     "required": [
       "value"
     ],
     "properties": {
       "value": {
-        "type": "string",
-        "maxLength": 1
+        "type": "string"
       },
       "api_type": {
         "type": "string",
@@ -934,13 +1073,34 @@
       },
       "display_label": {
         "type": "string",
-        "default": "Emphasis Required"
+        "default": "Original Department Name"
       }
-    },
-    "example": {
-      "value": "F",
-      "api_type": "system",
-      "display_label": "Emphasis Required"
+    }
+  },
+  "origInstitution": {
+    "description": "The original institution",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Original Institution"
+      }
     }
   },
   "prevProgramId": {
@@ -1256,6 +1416,32 @@
       "value": "F",
       "api_type": "system",
       "display_label": "Study List Required"
+    }
+  },
+  "subject": {
+    "description": "The subject of the curriculum",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Subject"
+      }
     }
   },
   "subjectArea": {
