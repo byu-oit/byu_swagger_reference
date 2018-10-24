@@ -1324,6 +1324,32 @@
       "display_label": "Frequency"
     }
   },
+  "showFlexTitle": {
+    "description": "Boolean on whether or not to display flex titles",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Show Flex Title"
+      }
+    }
+  },
   "specification": {
     "description": "An academic program rule specification used to apply a rule to a course.",
     "type": "object",
