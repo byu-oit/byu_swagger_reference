@@ -546,7 +546,7 @@
     "description": "Changes made to the curriculum object",
     "type": "array",
     "items": {
-      "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/edits"
+      "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/edit"
     }
   },
   "emphasisReq": {
