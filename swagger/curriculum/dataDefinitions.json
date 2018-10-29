@@ -1428,7 +1428,7 @@
       "display_label": "Frequency"
     }
   },
-  "showFlexTitle": {
+  "showFlexTitles": {
     "description": "Boolean on whether or not to display flex titles",
     "type": "object",
     "required": [
@@ -1437,7 +1437,7 @@
     "properties": {
       "value": {
         "type": "string",
-        "x-template": ":showFlexTitle"
+        "x-template": ":showFlexTitles"
       },
       "api_type": {
         "type": "string",
@@ -1451,7 +1451,7 @@
       },
       "display_label": {
         "type": "string",
-        "default": "Show Flex Title"
+        "default": "Show Flex Titles"
       }
     }
   },
