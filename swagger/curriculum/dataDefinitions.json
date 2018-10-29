@@ -1,13 +1,14 @@
 {
   "allowFlexTitle": {
     "description": "Boolean on whether or not multiple titles are allowed",
-    "type": "Object",
+    "type": "object",
     "required": [
       "value"
     ],
     "properties": {
       "value": {
-        "type": "string"
+        "type": "string",
+        "x-template": ":allowFlexTitle"
       },
       "api_type": {
         "type": "string",
@@ -184,13 +185,14 @@
 },
   "catalogTitleCode": {
     "description": "The catalog title code",
-    "type": "Object",
+    "type": "object",
     "required": [
       "value"
     ],
     "properties": {
       "value": {
-        "type": "string"
+        "type": "string",
+        "x-template": ":catalogTitleCode"
       },
       "api_type": {
         "type": "string",
@@ -335,13 +337,14 @@
   },
   "crossListFlag": {
     "description": "The cross list flag",
-    "type": "Object",
+    "type": "object",
     "required": [
       "value"
     ],
     "properties": {
       "value": {
-        "type": "string"
+        "type": "string",
+        "x-template": ":crossListFlag"
       },
       "api_type": {
         "type": "string",
@@ -359,36 +362,6 @@
       }
     }
   },
-  "curriculumEdits": {
-    "description": "Changes made to the curriculum object",
-    "type": "Array",
-    "items": {
-      "description": "Change made to the curriculum object",
-      "type": "Object",
-      "required": [
-        "value"
-      ],
-      "properties": {
-        "value": {
-          "type": "string"
-        },
-        "api_type": {
-          "type": "string",
-          "enum": [
-            "system"
-          ],
-          "default": "system"
-        },
-        "key": {
-          "type": "boolean"
-        },
-        "display_label": {
-          "type": "string",
-          "default": "Edits"
-        }
-      }
-    }
-  },
   "curriculumId": {
     "description": "Unique identifier of for a curriculum unit.",
     "type": "object",
@@ -398,7 +371,8 @@
     ],
     "properties": {
       "value": {
-        "type": "string"
+        "type": "string",
+        "x-template": ":curriculumId"
       },
       "api_type": {
         "type": "string",
@@ -419,38 +393,6 @@
       "value": "12345",
       "api_type": "system",
       "display_label": "Curriculum Id"
-    }
-  },
-  "emphasisReq": {
-    "description": "A flag used to indicate if an academic program requires that a student declare a specific emphasis within the program.",
-    "type": "Object",
-    "required": [
-      "value"
-    ],
-    "properties": {
-      "value": {
-        "type": "string",
-        "maxLength": 1
-      },
-      "api_type": {
-        "type": "string",
-        "enum": [
-          "system"
-        ],
-        "default": "system"
-      },
-      "key": {
-        "type": "boolean"
-      },
-      "display_label": {
-        "type": "string",
-        "default": "Emphasis Required"
-      }
-    },
-    "example": {
-      "value": "F",
-      "api_type": "system",
-      "display_label": "Emphasis Required"
     }
   },
   "degree": {
@@ -579,6 +521,112 @@
       "display_label": "Display Order"
     }
   },
+  "edit": {
+    "description": "Individual change made to the curriculum object",
+    "type": "object",
+    "properties": {
+      "dateTimeUpdated": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/dateTimeUpdated"
+      },
+      "updatedBy": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/updatedBy"
+      },
+      "updatedById": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/updatedById"
+      },
+      "fieldsChanged": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fieldsChanged"
+      },
+      "message": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/message"
+      }
+    }
+  },
+  "edits": {
+    "description": "Changes made to the curriculum object",
+    "type": "array",
+    "items": {
+      "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/edits"
+    }
+  },
+  "emphasisReq": {
+    "description": "A flag used to indicate if an academic program requires that a student declare a specific emphasis within the program.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 1
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Emphasis Required"
+      }
+    },
+    "example": {
+      "value": "F",
+      "api_type": "system",
+      "display_label": "Emphasis Required"
+    }
+  },
+  "fieldChanged": {
+    "description": "An individual field changed for specified curriculum",
+    "type": "object",
+    "properties": {
+      "fieldName": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fieldName"
+      },
+      "fromValue": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fromValue"
+      }
+    }
+  },
+  "fieldsChanged": {
+    "description": "A list of fields changed for specified curriculum",
+    "type": "array",
+    "items": {
+      "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fieldChanged"
+    }
+  },
+  "fieldName": {
+    "description": "Name of a field that has been changed.",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":fieldName"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Field Name"
+      }
+    }
+  },
   "fixedOrVariable": {
     "description": "Code used to indicate if a course allows variable credits.",
     "type": "Object",
@@ -609,6 +657,33 @@
       "value": "F",
       "api_type": "system",
       "display_label": "Fixed or Variable"
+    }
+  },
+  "fromValue": {
+    "description": "The value that associated field previously stored.",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":fromValue"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "From Value"
+      }
     }
   },
   "geProgramId": {
@@ -926,6 +1001,33 @@
       "display_label": "Max Years To Complete"
     }
   },
+  "message": {
+    "description": "Explanation of why edit was made.",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":message"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Message"
+      }
+    }
+  },
   "minCreditHours": {
     "description": "The minimum number of hours a student will be credited with on completion of the course.  Used in conjunction with variable credit courses to set the minimum credit range.",
     "type": "Object",
@@ -1053,13 +1155,14 @@
   },
   "origDeptName": {
     "description": "The original Department name",
-    "type": "Object",
+    "type": "object",
     "required": [
       "value"
     ],
     "properties": {
       "value": {
-        "type": "string"
+        "type": "string",
+        "x-template": ":origDeptName"
       },
       "api_type": {
         "type": "string",
@@ -1079,13 +1182,14 @@
   },
   "origInstitution": {
     "description": "The original institution",
-    "type": "Object",
+    "type": "object",
     "required": [
       "value"
     ],
     "properties": {
       "value": {
-        "type": "string"
+        "type": "string",
+        "x-template": ":origInstitution"
       },
       "api_type": {
         "type": "string",
@@ -1326,13 +1430,14 @@
   },
   "showFlexTitle": {
     "description": "Boolean on whether or not to display flex titles",
-    "type": "Object",
+    "type": "object",
     "required": [
       "value"
     ],
     "properties": {
       "value": {
-        "type": "string"
+        "type": "string",
+        "x-template": ":showFlexTitle"
       },
       "api_type": {
         "type": "string",
@@ -1446,13 +1551,14 @@
   },
   "subject": {
     "description": "The subject of the curriculum",
-    "type": "Object",
+    "type": "object",
     "required": [
       "value"
     ],
     "properties": {
       "value": {
-        "type": "string"
+        "type": "string",
+        "x-template": ":subject"
       },
       "api_type": {
         "type": "string",

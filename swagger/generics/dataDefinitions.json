@@ -64,13 +64,14 @@
   },
   "dateTimeUpdated": {
     "description": "A date and time stamp that indicates when the last update event occurred to the associated resource.",
-    "type": "Object",
+    "type": "object",
     "required": [
       "value"
     ],
     "properties": {
       "value": {
-        "type": "date"
+        "type": "date",
+        "x-template": ":dateTimeUpdated"
       },
       "api_type": {
         "type": "string",
@@ -95,13 +96,14 @@
   },
   "description": {
     "description": "Description of a resource.",
-    "type": "Object",
+    "type": "object",
     "required": [
       "value"
     ],
     "properties": {
       "value": {
-        "type": "string"
+        "type": "string",
+        "x-template": ":description"
       },
       "api_type": {
         "type": "string",
@@ -219,13 +221,46 @@
   },
   "updatedById": {
     "description": "Identifier of who/what performed to last update of the resource.",
-    "type": "Object",
+    "type": "object",
     "required": [
       "value"
     ],
     "properties": {
       "value": {
-        "type": "string"
+        "type": "string",
+        "x-template": ":updatedById"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Updated By"
+      }
+    },
+    "example": {
+      "value": "A description",
+      "api_type": "system",
+      "display_label": "Updated By"
+    }
+  },
+  "updatedBy": {
+    "description": "Name of who/what performed to last update of the resource.",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":updatedBy"
       },
       "api_type": {
         "type": "string",
