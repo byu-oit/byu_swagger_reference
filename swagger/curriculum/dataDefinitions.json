@@ -1765,5 +1765,26 @@
       "api_type": "system",
       "display_label": "Years To Complete"
     }
+  },
+
+  "curriculum_put": {
+    "type": "object",
+    "properties": {
+      "allow_flex_title": {
+        "type": "string"
+      },
+      "catalog_title_code": {
+        "type": "string"
+      },
+      "show_flex_titles": {
+        "type": "string"
+      },
+      "cross_list_flag": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      }
+    }
   }
 }
