@@ -26,6 +26,33 @@
       }
     }
   },
+  "approvalDate": {
+    "description": "Date given that the course was approved for use",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":approvalDate"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Approval Date"
+      }
+    }
+  },
   "attributeName": {
     "description": "The name of an academic course attribute resource or collection of resources.",
     "type": "Object",
@@ -119,8 +146,35 @@
       "display_label": "Attribute Value"
     }
   },
+  "baseTitleCode": {
+    "description": "Is this the base title code",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":baseTitleCode"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Base Title Code"
+      }
+    }
+  },
   "catalogNumber": {
-    "description": "A number assigned to a course to distinguish it from other courses within the.  Generally the higher the number the more specialized the course or the course is targeted towards students who are progressing in their degree.",
+    "description": "A number assigned to a course to distinguish it from other courses within the list.  Generally the higher the number the more specialized the course or the course is targeted towards students who are progressing in their degree.",
     "type": "Object",
     "pattern": "^[0-9]{3}$",
     "required": [
@@ -128,7 +182,8 @@
     ],
     "properties": {
       "value": {
-        "type": "string"
+        "type": "string",
+        "x-template": ":catalogNumber"
       },
       "api_type": {
         "type": "string",
@@ -160,7 +215,8 @@
   "properties": {
     "value": {
       "type": "string",
-      "maxLength": 1
+      "maxLength": 1,
+      "x-template": ":catalogSuffix"
     },
     "api_type": {
       "type": "string",
@@ -457,6 +513,33 @@
       "value": "BS",
       "api_type": "system",
       "display_label": "Degree Level"
+    }
+  },
+  "deptName": {
+    "description": "Name of the department course is associated with",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":deptName"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Department Name"
+      }
     }
   },
   "diplomaDesc": {
@@ -1207,6 +1290,33 @@
       }
     }
   },
+  "postingDeadline": {
+    "description": "Deadline to post the course",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":postingDeadline"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Posting Deadline"
+      }
+    }
+  },
   "prevProgramId": {
     "description": "Optionally identifies the academic program of origin.",
     "type": "object",
@@ -1649,7 +1759,8 @@
     ],
     "properties": {
       "value": {
-        "type": "string"
+        "type": "string",
+        "x-template": ":titleCode"
       },
       "api_type": {
         "type": "string",
@@ -1680,7 +1791,8 @@
     ],
     "properties": {
       "value": {
-        "type": "string"
+        "type": "string",
+        "x-template": ":transcriptTitle"
       },
       "api_type": {
         "type": "string",
@@ -1783,6 +1895,23 @@
         "type": "string"
       },
       "description": {
+        "type": "string"
+      }
+    }
+  },
+  "course_title_put": {
+    "type": "object",
+    "properties": {
+      "catalog_number": {
+        "type": "string"
+      },
+      "catalog_suffix": {
+        "type": "string"
+      },
+      "transcript_title": {
+        "type": "string"
+      },
+      "base_title_code": {
         "type": "string"
       }
     }

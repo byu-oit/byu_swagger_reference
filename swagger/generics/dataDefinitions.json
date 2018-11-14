@@ -157,6 +157,33 @@
       "display_label": "Effective"
     }
   },
+  "effectiveYearTerm": {
+    "description": "Resource is considered the effective version as of this year term",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":effectiveYearTerm"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Effective Year Term"
+      }
+    }
+  },
   "expiredDate": {
     "description": "Resource is considered to be an expired or historical version as of this date.",
     "type": "Object",
@@ -186,6 +213,33 @@
       "value": "2017-01-01",
       "api_type": "system",
       "display_label": "Expired"
+    }
+  },
+  "expiredYearTerm": {
+    "description": "Resource is considered to be an expired or historical version as of this year term",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":expiredYearTerm"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Expired Year Term"
+      }
     }
   },
   "text": {

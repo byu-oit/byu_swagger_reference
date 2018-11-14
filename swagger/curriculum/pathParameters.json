@@ -22,5 +22,12 @@
     "required": true,
     "type": "string",
     "pattern": "^[0-9]{3}$"
+  },
+  "yearTerm": {
+    "name": "yearTerm",
+    "in": "path",
+    "description": "Specifies a year term",
+    "required": true,
+    "type": "string"
   }
 }
