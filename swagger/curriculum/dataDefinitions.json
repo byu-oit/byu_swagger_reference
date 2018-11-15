@@ -328,6 +328,33 @@
       "display_label": "Committee Members"
     }
   },
+  "courseType": {
+    "description": "Describes the type of course",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":courseType"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Course Type"
+      }
+    }
+  },
   "creditInstitution": {
     "description": "Institution associated with this resource.",
     "type": "object",
@@ -368,7 +395,8 @@
     ],
     "properties": {
       "value": {
-        "type": "integer"
+        "type": "integer",
+        "x-template": ":creditHours"
       },
       "api_type": {
         "type": "string",
@@ -389,6 +417,33 @@
       "value": 4,
       "api_type": "system",
       "display_label": "Credit Hours"
+    }
+  },
+  "creditType": {
+    "description": "Will credit be received for a SEMESTER or TERM",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":creditType"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Credit Type"
+      }
     }
   },
   "crossListFlag": {
@@ -719,7 +774,8 @@
     "properties": {
       "value": {
         "type": "string",
-        "maxLength": 1
+        "maxLength": 1,
+        "x-template": ":fixedOrVariable"
       },
       "api_type": {
         "type": "string",
@@ -801,6 +857,60 @@
       "display_label": "GE Program Id"
     }
   },
+  "gradeRule": {
+    "description": "The grade rule for the course",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":gradeRule"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Grade Rule"
+      }
+    }
+  },
+  "honorsApproved": {
+    "description": "Has this course been approved as an honors course",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "boolean",
+        "x-template": ":honorsApproved"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Honors Approved"
+      }
+    }
+  },
   "honorsRec": {
     "description": "A flag used to indicate if an academic program provides honor recognition.",
     "type": "Object",
@@ -831,6 +941,60 @@
       "value": "F",
       "api_type": "system",
       "display_label": "Honors Recognition"
+    }
+  },
+  "labHours": {
+    "description": "How many lab hours does this course have",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":labHours"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Lab Hours"
+      }
+    }
+  },
+  "lectureHours": {
+    "description": "How many lecture hours does this course have",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":lectureHours"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Lecture Hours"
+      }
     }
   },
   "limEnrProgram": {
@@ -1119,7 +1283,8 @@
     ],
     "properties": {
       "value": {
-        "type": "integer"
+        "type": "integer",
+        "x-template": ":minCreditHours"
       },
       "api_type": {
         "type": "string",
@@ -1506,6 +1671,33 @@
       "display_label": "Residence Hours"
     }
   },
+  "semester": {
+    "description": "Is this a semester long course",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":semester"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Semester"
+      }
+    }
+  },
   "semesterFrequency": {
     "description": "Code used to indicate during what semester(s), Fall and Winter, a course is generally offered.",
     "type": "Object",
@@ -1536,6 +1728,33 @@
       "value": "A",
       "api_type": "system",
       "display_label": "Frequency"
+    }
+  },
+  "serviceLearning": {
+    "description": "Is this course a service learning course",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":serviceLearning"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Service Learning"
+      }
     }
   },
   "showFlexTitles": {
@@ -1748,6 +1967,33 @@
       "value": "BS",
       "api_type": "system",
       "display_label": "Teaching Program"
+    }
+  },
+  "term": {
+    "description": "Is this a term length course",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":term"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Term"
+      }
     }
   },
   "titleCode": {

@@ -19,6 +19,90 @@
       "$ref": "#/x-mock_json/course"
     }
   },
+  "classFee": {
+    "description": "A class fee for a specific year term",
+    "type": "object",
+    "properties": {
+      "effectiveYearTerm": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/effectiveYearTerm"
+      },
+      "expiredYearTerm": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredYearTerm"
+      },
+      "semester": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/semester"
+      },
+      "term": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/term"
+      }
+    }
+  },
+  "classFees": {
+    "description": "A map of class fees for an individual course detail object",
+    "type": "object",
+    "properties": {
+      "additionalProperties": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/course/course.json#/classFee"
+      }
+    }
+  },
+  "courseControl": {
+    "description": "A course control for a specific year term",
+    "type": "object",
+    "properties": {
+      "courseType": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/courseType"
+      },
+      "creditHours": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/creditHours"
+      },
+      "creditType": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/creditType"
+      },
+      "dateTimeUpdated": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/dateTimeUpdated"
+      },
+      "edits": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/edits"
+      },
+      "effectiveYearTerm": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/effectiveYearTerm"
+      },
+      "expiredYearTerm": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredYearTerm"
+      },
+      "fixedOrVariable": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fixedOrVariable"
+      },
+      "gradeRule": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/gradeRule"
+      },
+      "honorsApproved": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/honorsApproved"
+      },
+      "labHours": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/labHours"
+      },
+      "lectureHours": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/lectureHours"
+      },
+      "minCreditHours": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/minCreditHours"
+      },
+      "serviceLearning": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/serviceLearning"
+      }
+    }
+  },
+  "courseControls": {
+    "description": "A map of course controls for an individual course detail object",
+    "type": "object",
+    "properties": {
+      "additionalProperties": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/course/course.json#/courseControl"
+      }
+    }
+  },
   "links": {
     "description": "Hypermedia Links for an academic course resource",
     "type": "object",
@@ -120,8 +204,11 @@
     "description": "Summary subset of course information",
     "type": "object",
     "properties": {
-      "subjectArea": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/subjectArea"
+      "approvalDate": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/approvalDate"
+      },
+      "baseTitleCode": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/baseTitleCode"
       },
       "catalogNumber": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/catalogNumber"
@@ -129,23 +216,59 @@
       "catalogSuffix": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/catalogSuffix"
       },
+      "classFees": {
+        "$ref": "#/classFees"
+      },
+      "courseCatalog": {
+        "description": "Stub",
+        "type": "string"
+      },
+      "courseControls": {
+        "$ref": "#/courseControls"
+      },
+      "curriculumId": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/curriculumId"
+      },
+      "dataTracking": {
+        "description": "Stub",
+        "type": "string"
+      },
+      "deptName": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/deptName"
+      },
+      "edits": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/edits"
+      },
+      "effectiveYearTerm": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/effectiveYearTerm"
+      },
+      "expiredYearTerm": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredYearTerm"
+      },
+      "geArea": {
+        "description": "Stub",
+        "type": "string"
+      },
+      "limitations": {
+        "description": "Stub",
+        "type": "string"
+      },
+      "postingDeadline": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/postingDeadline"
+      },
+      "prerequisites": {
+        "description": "Stub",
+        "type": "string"
+      },
+      "titleCode": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/titleCode"
+      },
       "transcriptTitle": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/transcriptTitle"
       },
-      "creditHours": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/creditHours"
-      },
-      "fixedOrVariable": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fixedOrVariable"
-      },
-      "minCreditHours": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/minCreditHours"
-      },
-      "fallFrequency": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/semesterFrequency"
-      },
-      "winterFrequency": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/semesterFrequency"
+      "whenTaught": {
+        "description": "Stub",
+        "type": "string"
       }
     },
     "example": {
