@@ -40,10 +40,8 @@
   "classFees": {
     "description": "A map of class fees for an individual course detail object",
     "type": "object",
-    "properties": {
-      "additionalProperties": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/course/course.json#/classFee"
-      }
+    "additionalProperties": {
+      "$ref": "#/classFee"
     }
   },
   "courseControl": {
