@@ -19,6 +19,7 @@
       "$ref": "#/x-mock_json/course"
     }
   },
+
   "classFee": {
     "description": "A class fee for a specific year term",
     "type": "object",
@@ -95,10 +96,138 @@
   "courseControls": {
     "description": "A map of course controls for an individual course detail object",
     "type": "object",
-    "properties": {
-      "additionalProperties": {
-        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/course/course.json#/courseControl"
+    "additionalProperties": {
+        "$ref": "#/courseControl"
       }
+  },
+  "geAreaList": {
+    "description": "List of ge areas that are associated with the course",
+    "type": "object",
+    "properties": {
+      "effectiveYearTerm": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/effectiveYearTerm"
+      },
+      "expiredYearTerm": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredYearTerm"
+      },
+      "values": {
+        "type": "array",
+        "items": {
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/geAreaName"
+        }
+      }
+    }
+  },
+  "geAreaMap": {
+    "description": "A map of ge areas that are associated with this course by year term",
+    "type": "object",
+    "additionalProperties": {
+      "$ref": "#/geAreaList"
+    }
+  },
+  "limitation": {
+    "description": "A year term mapped to a limitation associated with the given course",
+    "type": "object",
+    "properties": {
+      "effectiveYearTerm": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/effectiveYearTerm"
+      },
+      "expiredYearTerm": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredYearTerm"
+      },
+      "values": {
+        "type": "array",
+        "items": {
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/limitationDetail"
+        }
+      }
+    }
+  },
+  "limitations": {
+    "description": "A map of limitations associated with given course by year term",
+    "type": "object",
+    "additionalProperties": {
+      "$ref": "#/limitation"
+    }
+  },
+  "prerequisiteData": {
+    "description": "Information about different sets of prerequisites that are required to take the course",
+    "type": "object",
+    "properties": {
+      "courses": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/courses"
+      },
+      "edits": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/edits"
+      },
+      "effectiveYearTerm": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/effectiveYearTerm"
+      },
+      "enforced": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/enforced"
+      },
+      "expiredYearTerm": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredYearTerm"
+      },
+      "instructorApproval": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/instructorApproval"
+      },
+      "seqNum": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/seqNum"
+      }
+    }
+  },
+  "prerequisites": {
+    "description": "A map of prerequisite lists required for the course",
+    "type": "object",
+    "additionalProperties": {
+      "$ref": "#/prerequisiteData"
+    }
+  },
+  "whenTaught": {
+    "description": "Defines which semesters or terms a course is taught for its effective time period",
+    "type": "object",
+    "properties": {
+      "dateTimeUpdated": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/dateTimeUpdated"
+      },
+      "edits": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/edits"
+      },
+      "effectiveYearTerm": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/effectiveYearTerm"
+      },
+      "expiredYearTerm": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredYearTerm"
+      },
+      "fall": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fall"
+      },
+      "seqNum": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/seqNum"
+      },
+      "sprSum": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/sprSum"
+      },
+      "spring": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/spring"
+      },
+      "summer": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/summer"
+      },
+      "updatedById": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/updatedById"
+      },
+      "winter": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/winter"
+      }
+    }
+  },
+  "whenTaughtMap": {
+    "description": "A map of year term to when taught objects defining when the course is taught for different semesters and terms",
+    "type": "object",
+    "additionalProperties": {
+      "$ref": "#/whenTaught"
     }
   },
   "links": {
@@ -244,19 +373,16 @@
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/expiredYearTerm"
       },
       "geArea": {
-        "description": "Stub",
-        "type": "string"
+        "$ref": "#/geAreaMap"
       },
       "limitations": {
-        "description": "Stub",
-        "type": "string"
+        "$ref": "#/limitations"
       },
       "postingDeadline": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/postingDeadline"
       },
       "prerequisites": {
-        "description": "Stub",
-        "type": "string"
+        "$ref": "#/prerequisites"
       },
       "titleCode": {
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/titleCode"
@@ -265,8 +391,7 @@
         "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/transcriptTitle"
       },
       "whenTaught": {
-        "description": "Stub",
-        "type": "string"
+        "$ref": "#/whenTaughtMap"
       }
     },
     "example": {

@@ -328,6 +328,20 @@
       "display_label": "Committee Members"
     }
   },
+  "courseGroup": {
+    "description": "Group of prerequisite courses necessary to be taken before given course can be",
+    "type": "array",
+    "items": {
+      "$ref": "#/prerequisiteCourse"
+    }
+  },
+  "courses": {
+    "description": "Groups of prerequisite courses required before the course can be taken. Groups can be alternatives to other groups",
+    "type": "object",
+    "additionalProperties": {
+      "$ref": "#/courseGroup"
+    }
+  },
   "courseType": {
     "description": "Describes the type of course",
     "type": "object",
@@ -719,6 +733,57 @@
       "display_label": "Emphasis Required"
     }
   },
+  "enforced": {
+    "description": "Boolean stating whether or not taking prerequisites before course is required",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":enforced"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Enforced"
+      }
+    }
+  },
+  "fall": {
+    "description": "Information about course availability in the fall",
+    "type": "object",
+    "properties": {
+      "firstBlock": {
+        "$ref": "#/firstBlock"
+      },
+      "firstBlockOnDemand": {
+        "$ref": "#/firstBlockOnDemand"
+      },
+      "frequency": {
+        "$ref": "#/frequency"
+      },
+      "onDemand": {
+        "$ref": "#/onDemand"
+      },
+      "secondBlock": {
+        "$ref": "#/secondBlock"
+      },
+      "secondBlockOnDemand": {
+        "$ref": "#/secondBlockOnDemand"
+      }
+    }
+  },
   "fieldChanged": {
     "description": "An individual field changed for specified curriculum",
     "type": "object",
@@ -765,6 +830,60 @@
       }
     }
   },
+  "firstBlock": {
+    "description": "Marks whether or not course is active during first block",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":firstBlock"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "First Block"
+      }
+    }
+  },
+  "firstBlockOnDemand": {
+    "description": "Marks whether course can be active during first block if enough students want to take the course",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":firstBlockOnDemand"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "First Block On Demand"
+      }
+    }
+  },
   "fixedOrVariable": {
     "description": "Code used to indicate if a course allows variable credits.",
     "type": "Object",
@@ -798,6 +917,33 @@
       "display_label": "Fixed or Variable"
     }
   },
+  "frequency": {
+    "description": "Marks the frequency the course is taught for given period",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":frequency"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Frequency"
+      }
+    }
+  },
   "fromValue": {
     "description": "The value that associated field previously stored.",
     "type": "object",
@@ -822,6 +968,33 @@
       "display_label": {
         "type": "string",
         "default": "From Value"
+      }
+    }
+  },
+  "geAreaName": {
+    "description": "Name of a ge area that is fulfilled by a course",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":geAreaName"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "GE Area Name"
       }
     }
   },
@@ -943,6 +1116,33 @@
       "display_label": "Honors Recognition"
     }
   },
+  "instructorApproval": {
+    "description": "Boolean determining whether or not prerequisites taken have to be approved by an instructor",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":instructorApproval"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Instructor Approval"
+      }
+    }
+  },
   "labHours": {
     "description": "How many lab hours does this course have",
     "type": "object",
@@ -1027,6 +1227,75 @@
       "value": "BS",
       "api_type": "system",
       "display_label": "Teaching Program"
+    }
+  },
+  "limitationDetail": {
+    "description": "Specifies a limitation for a course and whether or not it is active",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "type": {
+        "$ref": "#/limitationType"
+      },
+      "value": {
+        "$ref": "#/limitationValue"
+      }
+    }
+  },
+  "limitationType": {
+    "description": "Describes the type of limitation  being applied",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":limitationType"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Limitation Type"
+      }
+    }
+  },
+  "limitationValue": {
+    "description": "Boolean on whether or not limitation is active",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "boolean",
+        "x-template": ":limitationValue"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Limitation Value"
+      }
     }
   },
   "longDesc": {
@@ -1401,6 +1670,60 @@
       "display_label": "Min Program Hours"
     }
   },
+  "onDemand": {
+    "description": "Marks whether this course can be active for period if enough students want to enroll",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":onDemand"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "On Demand"
+      }
+    }
+  },
+  "orderInGroup": {
+    "description": "Number denoting the position of prerequisite in prerequisite group required to take the course",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":orderInGroup"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Order In Group"
+      }
+    }
+  },
   "origDeptName": {
     "description": "The original Department name",
     "type": "object",
@@ -1479,6 +1802,21 @@
       "display_label": {
         "type": "string",
         "default": "Posting Deadline"
+      }
+    }
+  },
+  "prerequisiteCourse": {
+    "description": "Course prerequisite required to be taken before given course",
+    "type": "object",
+    "properties": {
+      "curriculumId": {
+        "$ref": "#/curriculumId"
+      },
+      "orderInGroup": {
+        "$ref": "#/orderInGroup"
+      },
+      "titleCode": {
+        "$ref": "#/titleCode"
       }
     }
   },
@@ -1671,6 +2009,87 @@
       "display_label": "Residence Hours"
     }
   },
+  "secondBlock": {
+    "description": "Marks whether or not course is active during second block",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":secondBlock"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Second Block"
+      }
+    }
+  },
+  "secondBlockOnDemand": {
+    "description": "Marks whether course can be active during second block if enough students want to take the course",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":secondBlockOnDemand"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Second Block On Demand"
+      }
+    }
+  },
+  "seqNum": {
+    "description": "Sequence number noting the order of the different active periods",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":seqNum"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Sequence Number"
+      }
+    }
+  },
   "semester": {
     "description": "Is this a semester long course",
     "type": "object",
@@ -1844,6 +2263,48 @@
       "value": "Curriculum",
       "api_type": "system",
       "display_label": "Category"
+    }
+  },
+  "spring": {
+    "description": "Information about course availability during the spring term",
+    "type": "object",
+    "properties": {
+      "frequency": {
+        "$ref": "#/frequency"
+      },
+      "onDemand": {
+        "$ref": "#/onDemand"
+      }
+    }
+  },
+  "sprSum": {
+    "description": "Information about course availability during the spring and summer terms",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "frequency": {
+        "$ref": "#/frequency"
+      },
+      "onDemand": {
+        "$ref": "#/onDemand"
+      }
+    }
+  },
+  "summer": {
+    "description": "Information about course availability during the summer term",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "frequency": {
+        "$ref": "#/frequency"
+      },
+      "onDemand": {
+        "$ref": "#/onDemand"
+      }
     }
   },
   "studyListRequired": {
@@ -2091,6 +2552,30 @@
       "value": "BS",
       "api_type": "system",
       "display_label": "Valid Admit"
+    }
+  },
+  "winter": {
+    "description": "Information about course availability during the winter semester",
+    "type": "object",
+    "properties": {
+      "firstBlock": {
+        "$ref": "#/firstBlock"
+      },
+      "firstBlockOnDemand": {
+        "$ref": "#/firstBlockOnDemand"
+      },
+      "frequency": {
+        "$ref": "#/frequency"
+      },
+      "onDemand": {
+        "$ref": "#/onDemand"
+      },
+      "secondBlock": {
+        "$ref": "#/secondBlock"
+      },
+      "secondBlockOnDemand": {
+        "$ref": "#/secondBlockOnDemand"
+      }
     }
   },
   "yearsToComplete": {
