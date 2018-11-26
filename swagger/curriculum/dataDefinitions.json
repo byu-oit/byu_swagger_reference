@@ -185,13 +185,18 @@
       },
       "textType": {
         "$ref": "#/textType"
+      },
+      "updatedBy": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/updatedBy"
+      },
+      "updatedById": {
+        "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/generics/dataDefinitions.json#/updatedById"
       }
-
     }
   },
   "catalogNumber": {
     "description": "A number assigned to a course to distinguish it from other courses within the list.  Generally the higher the number the more specialized the course or the course is targeted towards students who are progressing in their degree.",
-    "type": "Object",
+    "type": "object",
     "pattern": "^[0-9]{3}$",
     "required": [
       "value"
@@ -224,7 +229,7 @@
   },
   "catalogSuffix": {
   "description": " A code assigned to a course to indicate a feature such as repeatable or designated for honors students.",
-  "type": "Object",
+  "type": "object",
   "required": [
     "value"
   ],
@@ -534,6 +539,33 @@
       "value": "12345",
       "api_type": "system",
       "display_label": "Curriculum Id"
+    }
+  },
+  "dataTracking": {
+    "description": "Metadata tracking information about the data",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":dataTracking"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Data Tracking"
+      }
     }
   },
   "degree": {
@@ -2589,7 +2621,7 @@
   },
   "transcriptTitle": {
     "description": "The official title of a course that is printed on the student's transcript.",
-    "type": "Object",
+    "type": "object",
     "required": [
       "value"
     ],
