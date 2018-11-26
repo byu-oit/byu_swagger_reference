@@ -374,8 +374,7 @@
         "$ref": "#/classFees"
       },
       "courseCatalog": {
-        "description": "Stub",
-        "type": "string"
+        "$ref": "#/courseCatalog"
       },
       "courseControls": {
         "$ref": "#/courseControls"
