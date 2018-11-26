@@ -173,6 +173,22 @@
       }
     }
   },
+  "catalogDetail": {
+    "description": "Contains specific details about a course such as its name and description",
+    "type": "object",
+    "properties": {
+      "order": {
+        "$ref": "#/order"
+      },
+      "text": {
+        "$ref": "#/text"
+      },
+      "textType": {
+        "$ref": "#/textType"
+      }
+
+    }
+  },
   "catalogNumber": {
     "description": "A number assigned to a course to distinguish it from other courses within the list.  Generally the higher the number the more specialized the course or the course is targeted towards students who are progressing in their degree.",
     "type": "Object",
@@ -1697,6 +1713,33 @@
       }
     }
   },
+  "order": {
+    "description": "Number denoting the position of catalog detail in list",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":order"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Order"
+      }
+    }
+  },
   "orderInGroup": {
     "description": "Number denoting the position of prerequisite in prerequisite group required to take the course",
     "type": "object",
@@ -2454,6 +2497,60 @@
       "display_label": {
         "type": "string",
         "default": "Term"
+      }
+    }
+  },
+  "text": {
+    "description": "Descriptive information about a course",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":text"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Text"
+      }
+    }
+  },
+  "textType": {
+    "description": "Describes what type of text will be included in the response",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "x-template": ":textType"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Text Type"
       }
     }
   },
