@@ -1113,7 +1113,7 @@
     ],
     "properties": {
       "value": {
-        "type": "boolean",
+        "type": "string",
         "x-template": ":honorsApproved"
       },
       "api_type": {
