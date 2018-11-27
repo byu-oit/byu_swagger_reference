@@ -1277,6 +1277,24 @@
       "display_label": "Teaching Program"
     }
   },
+  "limitationList": {
+    "description": "Specifies a list of limitations for a course and whether or not it is active",
+    "type": "object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "type": {
+        "$ref": "#/limitationType"
+      },
+      "value": {
+        "type": "array",
+        "items": {
+          "$ref": "#/limitationValue"
+        }
+      }
+    }
+  },
   "limitationDetail": {
     "description": "Specifies a limitation for a course and whether or not it is active",
     "type": "object",
@@ -1327,7 +1345,7 @@
     ],
     "properties": {
       "value": {
-        "type": "boolean",
+        "type": "string",
         "x-template": ":limitationValue"
       },
       "api_type": {
