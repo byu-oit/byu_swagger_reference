@@ -10,9 +10,7 @@
         "$ref": "#/metadata"
       },
       "value": {
-        "summary": {
-          "$ref": "#/summary"
-        }
+          "$ref": "#/courseDetail"
       }
     },
     "example": {
@@ -357,8 +355,8 @@
       }
     ]
   },
-  "summary": {
-    "description": "Summary subset of course information",
+  "courseDetail": {
+    "description": "Detailed course information",
     "type": "object",
     "properties": {
       "approvalDate": {
@@ -423,7 +421,7 @@
       }
     },
     "example": {
-      "$ref": "#/x-mock_json/course/value/summary"
+      "$ref": "#/x-mock_json/course/value"
     }
   },
   "x-mock_json": {
@@ -456,34 +454,32 @@
         }
       },
       "value": {
-        "summary": {
-          "deptName": {
-            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/subjectArea/example"
-          },
-          "catalogNumber": {
-            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/catalogNumber/example"
-          },
-          "catalogSuffix": {
-            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/catalogSuffix/example"
-          },
-          "transcriptTitle": {
-            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/transcriptTitle/example"
-          },
-          "creditHours": {
-            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/creditHours/example"
-          },
-          "fixedOrVariable": {
-            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fixedOrVariable/example"
-          },
-          "minCreditHours": {
-            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/minCreditHours/example"
-          },
-          "fallFrequency": {
-            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/semesterFrequency/example"
-          },
-          "winterFrequency": {
-            "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/semesterFrequency/example"
-          }
+        "deptName": {
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/subjectArea/example"
+        },
+        "catalogNumber": {
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/catalogNumber/example"
+        },
+        "catalogSuffix": {
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/catalogSuffix/example"
+        },
+        "transcriptTitle": {
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/transcriptTitle/example"
+        },
+        "creditHours": {
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/creditHours/example"
+        },
+        "fixedOrVariable": {
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/fixedOrVariable/example"
+        },
+        "minCreditHours": {
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/minCreditHours/example"
+        },
+        "fallFrequency": {
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/semesterFrequency/example"
+        },
+        "winterFrequency": {
+          "$ref": "https://raw.githubusercontent.com/byu-oit/byu_swagger_reference/master/swagger/curriculum/dataDefinitions.json#/semesterFrequency/example"
         }
       }
     }
