@@ -2780,17 +2780,61 @@
   "course_title_put": {
     "type": "object",
     "properties": {
+      "approval_date": {
+        "type": "string"
+      },
+      "base_title_code": {
+        "type": "string"
+      },
       "catalog_number": {
         "type": "string"
       },
       "catalog_suffix": {
         "type": "string"
       },
-      "transcript_title": {
+      "dept_name": {
         "type": "string"
       },
-      "base_title_code": {
+      "posting_deadline": {
         "type": "string"
+      },
+      "transcript_title": {
+        "type": "string"
+      }
+    }
+  },
+  "course_controls_put": {
+    "type": "object",
+    "properties": {
+      "course_type": {
+        "type": "string"
+      },
+      "credit_hours": {
+        "type": "number"
+      },
+      "credit_type": {
+        "type": "string"
+      },
+      "fixed_or_variable": {
+        "type": "string"
+      },
+      "grade_rule": {
+        "type": "string"
+      },
+      "honors_approved": {
+        "type": "boolean"
+      },
+      "lab_hours": {
+        "type": "string"
+      },
+      "lecture_hours": {
+        "type": "string"
+      },
+      "min_credit_hours": {
+        "type": "number"
+      },
+      "service_learning": {
+        "type": "boolean"
       }
     }
   }
