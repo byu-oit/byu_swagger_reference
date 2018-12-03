@@ -2837,5 +2837,16 @@
         "type": "boolean"
       }
     }
+  },
+  "class_fees_put": {
+    "type": "object",
+    "properties": {
+      "semester": {
+        "type": "string"
+      },
+      "term": {
+        "type": "string"
+      }
+    }
   }
 }
