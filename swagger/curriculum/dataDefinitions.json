@@ -2848,5 +2848,39 @@
         "type": "string"
       }
     }
+  },
+  "when_taught_semester_put": {
+    "type": "object",
+    "properties": {
+      "first_block": {
+        "type": "string"
+      },
+      "first_block_on_demand": {
+        "type": "boolean"
+      },
+      "frequency": {
+        "type": "string"
+      },
+      "on_demand": {
+        "type": "boolean"
+      },
+      "second_block": {
+        "type": "string"
+      },
+      "second_block_on_demand": {
+        "type": "boolean"
+      }
+    }
+  },
+  "when_taught_term_put": {
+    "type": "object",
+    "properties": {
+      "frequency": {
+        "type": "string"
+      },
+      "on_demand": {
+        "type": "boolean"
+      }
+    }
   }
 }
