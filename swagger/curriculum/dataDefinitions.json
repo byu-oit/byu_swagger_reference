@@ -2777,29 +2777,28 @@
       }
     }
   },
-  "course_title_put": {
+  "class_fees_put": {
     "type": "object",
     "properties": {
-      "approval_date": {
+      "semester": {
         "type": "string"
       },
-      "base_title_code": {
+      "term": {
+        "type": "string"
+      }
+    }
+  },
+  "course_catalog_put": {
+    "type": "object",
+    "properties": {
+      "text_type": {
         "type": "string"
       },
-      "catalog_number": {
+      "text": {
         "type": "string"
       },
-      "catalog_suffix": {
-        "type": "string"
-      },
-      "dept_name": {
-        "type": "string"
-      },
-      "posting_deadline": {
-        "type": "string"
-      },
-      "transcript_title": {
-        "type": "string"
+      "order": {
+        "type": "number"
       }
     }
   },
@@ -2838,14 +2837,73 @@
       }
     }
   },
-  "class_fees_put": {
+  "course_title_put": {
     "type": "object",
     "properties": {
-      "semester": {
+      "approval_date": {
         "type": "string"
       },
-      "term": {
+      "base_title_code": {
         "type": "string"
+      },
+      "catalog_number": {
+        "type": "string"
+      },
+      "catalog_suffix": {
+        "type": "string"
+      },
+      "dept_name": {
+        "type": "string"
+      },
+      "posting_deadline": {
+        "type": "string"
+      },
+      "transcript_title": {
+        "type": "string"
+      }
+    }
+  },
+  "ge_area_put": {
+    "type": "array",
+    "items": {
+      "type": "string"
+    }
+  },
+  "limitations_put": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "type": "string"
+      },
+      "values": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "prerequisites_put": {
+    "type": "object",
+    "additionalProperties": {
+      "type": "object",
+      "properties": {
+        "curriculum_id": {
+          "type": "string"
+        },
+        "order_in_group": {
+          "type": "number"
+        },
+        "title_code": {
+          "type": "string"
+        }
       }
     }
   },
