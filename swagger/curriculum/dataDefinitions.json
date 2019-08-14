@@ -2040,6 +2040,38 @@
       "display_label": "Program Type"
     }
   },
+  "p2dCompatible": {
+    "description": "Flag to indicated requirement compatibility with the progress to degree algorithm.",
+    "type": "Object",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string",
+        "maxLength": 1
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "P2D Compatible"
+      }
+    },
+    "example": {
+      "value": "Y",
+      "api_type": "system",
+      "display_label": "P2D Compatible"
+    }
+  },
   "requirementId": {
     "description": "Internally generated unique identifier of an academic program requirement resource.",
     "type": "object",
