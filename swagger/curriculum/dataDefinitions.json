@@ -2008,6 +2008,38 @@
       "display_label": "Program Id"
     }
   },
+  "programCode": {
+    "description": "Internally generated unique code of an academic program.",
+    "type": "object",
+    "pattern": "^[0-9]{6}$",
+    "required": [
+      "value"
+    ],
+    "properties": {
+      "value": {
+        "type": "string"
+      },
+      "api_type": {
+        "type": "string",
+        "enum": [
+          "system"
+        ],
+        "default": "system"
+      },
+      "key": {
+        "type": "boolean"
+      },
+      "display_label": {
+        "type": "string",
+        "default": "Program Code"
+      }
+    },
+    "example": {
+      "value": "123456",
+      "api_type": "system",
+      "display_label": "Program Code"
+    }
+  },
   "programType": {
     "description": "Code used to indicate what type of program an academic program is.",
     "type": "Object",
